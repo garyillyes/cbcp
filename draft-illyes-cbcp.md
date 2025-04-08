@@ -8,8 +8,8 @@ submissiontype: independent
 number:
 date:
 v: 3
-area: AREA
-workgroup: WG Working Group
+# area: AREA
+# workgroup: WG Working Group
 keyword:
  - next generation
  - unicorn
