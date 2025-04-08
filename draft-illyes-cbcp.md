@@ -55,8 +55,9 @@ internet:
 1. Crawlers must support the Robots Exclusion Protocol.
 2. Crawlers must be easily identifiable through their user agent string.
 3. Crawlers must not interfere with the normal operation of a site.
-4. Crawlers must expose the IP ranges they're crawling from in a standardized format.
-5. Crawlers must expose a page where they explain how the crawled data is used.
+4. Crawlers must support caching directives
+5. Crawlers must expose the IP ranges they're crawling from in a standardized format.
+6. Crawlers must expose a page where they explain how the crawled data is used.
 
 
 ## Crawlers must support the Robots Exclusion Protocol
@@ -87,6 +88,10 @@ ensure that their crawlers are equipped with back-out logic that rely on at leas
 standard signals defined by
 [RFC9110](https://www.rfc-editor.org/rfc/rfc9110#name-server-error-5xx), preferably also
 additional heuristics such as relative response time of the server.
+
+## Crawlers must support caching directives
+[RFC9111](https://www.rfc-editor.org/rfc/rfc9111) HTTP caching, which removes the need
+of repeated access from crawlers to the same URI. 
 
 
 ## Crawlers must expose the IP ranges they use for crawling
