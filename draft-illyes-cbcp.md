@@ -7,7 +7,6 @@ docname: draft-illyes-cbcp-latest
 submissiontype: independent
 number:
 date:
-consensus: true
 v: 3
 area: AREA
 workgroup: WG Working Group
@@ -15,19 +14,12 @@ keyword:
  - next generation
  - unicorn
  - sparkling distributed ledger
-venue:
-  group: WG
-  type: Working Group
-  mail: WG@example.com
-  arch: https://example.com/WG
-  github: USER/REPO
-  latest: https://example.com/LATEST
 
 author:
  -
-    fullname: Your Name Here
-    organization: Your Organization Here
-    email: your.email@example.com
+    fullname: Gary Illyes
+    organization: Independent
+    email: synack@garyillyes.com
 
 normative:
 
