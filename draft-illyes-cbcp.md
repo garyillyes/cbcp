@@ -101,7 +101,7 @@ For example:
 
 
 ```
-<link rel="help" href="https://example.com/crawlerips.json" />
+&lt;link rel="help" href="https://example.com/crawlerips.json" /&gt;
 ```
 
 ## Crawlers must explain how the crawled data is used
