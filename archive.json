@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-04-22T01:18:18.341775+00:00",
+  "timestamp": "2025-04-24T01:18:39.280187+00:00",
   "repo": "garyillyes/cbcp",
   "labels": [
     {
@@ -55,16 +55,24 @@
       "id": "I_kwDOOV_Krc6y8bJo",
       "title": "Clarifications regarding crawler IP ranges",
       "url": "https://github.com/garyillyes/cbcp/issues/1",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "sebastian-nagel",
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [],
       "body": "> crawler operators should expose the IP ranges they allocated for crawling in a standardized, machine readable format, and keep it reasonably up to date (i.e. shouldn't get older than 7 days).\n\n1. Replace \"shouldn't get older than 7 days\" by \"shouldn't get outdated for more than 7 days\"?\n  The term \"old\" is unspecific: it could also mean that the file is required to be touched every 7 days, without keeping the information up-to-date.\n \n2. Is a 7-day update period sufficient?\n   There are at least the following use cases for the list of IP address ranges:\n   1. verify requests in web server access logs.\n   2. configure IP blocking or explicitly allowing the specified IP ranges.\n   3. IP targeting which includes also \"black hat\" techniques such as \"cloaking\".\n  \n   For (i), \"historic\" IP ranges are a requirement, otherwise verification may raise false alarms about faked user-agent strings in past requests. This would also recommend to attach time periods to IP address ranges.\n\n   For (ii) and (iii), a 7-day update period seems overtly long. New IP ranges should be announced even ahead of time. Since we have to assume that everybody plays nice, \"black hat\" techniques are no counter argument for announcing IP address ahead of time. However, they might be mentioned in the section \"Security Considerations\".\n\n3. An example JSON schema would help to keep variations of `crawlerips.json` at a minimum. At least, it should be mentioned what \"standardized\" means \u2013 \"constant\" for the crawler with a published description / specification or whether it is part of a globally defined standard (maybe upcoming).\n\n4. What about reverse DNS as an alternative or augmenting technique for crawler verification? Should this be mentioned or even added as a section?\n\n",
       "createdAt": "2025-04-17T11:13:39Z",
-      "updatedAt": "2025-04-17T11:13:39Z",
-      "closedAt": null,
-      "comments": []
+      "updatedAt": "2025-04-22T11:12:38Z",
+      "closedAt": "2025-04-22T11:12:36Z",
+      "comments": [
+        {
+          "author": "garyillyes",
+          "authorAssociation": "OWNER",
+          "body": "Howdy! \n\nI mentioned this in the interim meeting, but to put it here as well: I won't be able to develop this I-D further for various reasons. I would LOVE if someone could pick it up and develop it further though together with publishers, and then bring it back to the IETF (not yet sure which WG) for adoption. ",
+          "createdAt": "2025-04-22T11:12:37Z",
+          "updatedAt": "2025-04-22T11:12:37Z"
+        }
+      ]
     }
   ],
   "pulls": []
