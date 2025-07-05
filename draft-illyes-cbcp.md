@@ -113,9 +113,12 @@ per ressource to avoid loops.
 
 Crawlers should not try to circumvent authentication or other access restrictions e.g. when a login is required, CAPTCHAs are used, or the content is behind a paywall, except if explicitly negotiated with the website owner.
 
-Crawlers should only access content and by all means avoid to modify content by using
-HTTP request other than GET such as POST, PUT, DELETE. Similarly crawlers should avoid
-assessing Javascript content. 
+Crawlers should access resources primarily with HTTP GET requests,
+resorting to other methods (e.g., POST, PUT) only if there is a preexisting
+agreement with the publisher or the publisher's content management software
+makes those calls automatically when JavaScript is executed.
+Generally, load caused by executing JavaScript should be
+considered carefully or even be avoided whenever possible.
 
 ## Crawlers must support caching directives
 
