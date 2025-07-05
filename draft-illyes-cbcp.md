@@ -44,7 +44,7 @@ can be influenced. As such, crawler operators are requested
 to conform to crawling best pratices in this document.
 
 To further help website owners,
-it should in additon be considered to create together a central
+it should in addition be considered to create a central
 website where website owners can look up well behaving crawlers.
 Note that while self declared research crawlers, including privacy and malware discovery
 crawlers, and contractual crawlers are welcome to add themselves to adopt these practices,
