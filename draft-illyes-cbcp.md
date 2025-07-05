@@ -69,8 +69,7 @@ applied by a vast majority of large scale crawlers on the Internet:
 
 Crawlers must support the REP as defined in
 [RFC9309](https://www.rfc-editor.org/rfc/rfc9309.html#section-2.2.1) to allow site owners
-to opt out from crawling. Further crawler must respect the restrictions provided
-by the REP such as crawling delay and rate limits.
+to opt out from crawling.
 
 Especially if the website does not support REP, crawlers further need to respect the
 meta robots tag in the HTTP header.
