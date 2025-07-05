@@ -106,7 +106,7 @@ as well as the respective HTTP status codes in the responses,
 especially if error occur, to avoid repeatedly crawling the same source.
 
 Generally, crawlers should avoid multiple concurrent requests to the same resources
-and use a crawling rate that is no higher than 1 request per second or as specified in
+and should limit the crawling rate to avoid overload, if possible considering limits specified in
 the REP protocol. Further, ressources should not be re-crawled more often than every 24 hours.
 Ideally crawlers should limit the crawling depth and number of requests
 per ressource to avoid loops.
