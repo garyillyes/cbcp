@@ -130,7 +130,7 @@ considered carefully or even be avoided whenever possible.
 
 ## Crawlers must support caching directives
 
-{{RFC9111}} HTTP caching, which removes the need of repeated access from 
+{{RFC9111}} HTTP caching, which removes the need of repeated access from
 crawlers to the same URL.
 
 
