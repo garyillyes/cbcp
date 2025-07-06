@@ -46,14 +46,13 @@ This document describes best pratices for web crawlers.
 
 Automatic clients (i.e. crawlers, bots) are used to access web resources, e.g., for indexing
 for search but more recently also for new use cases related to Artificial Intelligence (AI)
-such as training models. With an increase in crawling activity, it is particular important 
+such as training models. With an increase in crawling activity, it is particular important
 that automatic clients having an expected behavior and respect contraint of the ressources
 being crawled. This includes documenting how to identify them and how their behavior
 can be influenced. As such, crawler operators are requested
 to conform to crawling best pratices in this document.
 
-To further help website owners,
-it should in addition be considered to create a central
+To further help website owners, it should in addition be considered to create a central
 registry where website owners can look up well behaving crawlers.
 Note that while self declared research crawlers, including privacy and malware discovery
 crawlers, and contractual crawlers are welcome to add themselves to adopt these practices,
@@ -105,11 +104,10 @@ as much as reasonable possible.
 Depending on a site's setup (computing resources, software efficiency) and its size,
 crawling may slow down the site or take it offline altogether. Crawler operators must
 ensure that their crawlers are equipped with back-out logic that rely on at least the
-standard signals defined by
-{{Section 15.6 of RFC9110}}, preferably also
+standard signals defined by {{Section 15.6 of RFC9110}}, preferably also
 additional heuristics such as relative response time of the server.
 
-As such, crawlers should log already visited URL and how many requests they sent to a resource 
+As such, crawlers should log already visited URL and how many requests they sent to a resource
 as well as the respective HTTP status codes in the responses,
 especially if error occur, to avoid repeatedly crawling the same source.
 
@@ -119,7 +117,9 @@ the REP protocol. Further, ressources should not be re-crawled too frequently.
 Ideally crawlers should limit the crawling depth and number of requests
 per ressource to avoid loops.
 
-Crawlers should not try to circumvent authentication or other access restrictions e.g. when a login is required, CAPTCHAs are used, or the content is behind a paywall, except if explicitly negotiated with the website owner.
+Crawlers should not try to circumvent authentication or other access
+restrictions e.g. when a login is required, CAPTCHAs are used, or the content
+is behind a paywall, except if explicitly negotiated with the website owner.
 
 Crawlers should access resources primarily with HTTP GET requests,
 resorting to other methods (e.g., POST, PUT) only if there is a preexisting
@@ -130,8 +130,8 @@ considered carefully or even be avoided whenever possible.
 
 ## Crawlers must support caching directives
 
-{{RFC9111}} HTTP caching, which removes the need
-of repeated access from crawlers to the same URI. 
+{{RFC9111}} HTTP caching, which removes the need of repeated access from 
+crawlers to the same URL.
 
 
 ## Crawlers must expose the IP ranges they use for crawling
