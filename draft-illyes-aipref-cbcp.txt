@@ -10,7 +10,7 @@ Expires: 7 January 2026                                         Ericsson
 
 
                          Crawler best practices
-                        draft-illyes-cbcp-latest
+                    draft-illyes-aipref-cbcp-latest
 
 Abstract
 
