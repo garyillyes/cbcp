@@ -28,6 +28,9 @@ author:
     email: mirja.kuehlewind@ericsson.com
 
 normative:
+   REP: rfc9309
+   HTTP-SEMANTICS: rfc9110
+   HTTP-CACHING: rfc9111
 
 informative:
 
@@ -69,13 +72,13 @@ internet:
 ## Crawlers must support the Robots Exclusion Protocol
 
 All well behaved crawlers must support the REP as defined in
-[RFC9309](https://www.rfc-editor.org/rfc/rfc9309.html#section-2.2.1) to allow site owners
+{{Section 2.2.1 of RFC9309}} to allow site owners
 to opt out from crawling.
 
 
 ## Crawlers must be easily identifiable through their user agent string
 
-As stipulated in [RFC9309](https://www.rfc-editor.org/rfc/rfc9309.html#section-2.2.1)
+As stipulated in {{Section 2.2.1 of RFC9309}}
 (Robots Exclusion Protocol; REP), the HTTP request header `user-agent` should
 identify the crawler clearly, typically by including a URL that hosts the crawler's
 description. For example
@@ -92,11 +95,11 @@ Depending on a site's setup (computing resources, software efficiency) and its s
 crawling may slow down the site or take it offline altogether. Crawler operators must
 ensure that their crawlers are equipped with back-out logic that rely on at least the
 standard signals defined by
-[RFC9110](https://www.rfc-editor.org/rfc/rfc9110#name-server-error-5xx), preferably also
+{{Section 15.6 of RFC9110}}, preferably also
 additional heuristics such as relative response time of the server.
 
 ## Crawlers must support caching directives
-[RFC9111](https://www.rfc-editor.org/rfc/rfc9111) HTTP caching, which removes the need
+{{RFC9111}} HTTP caching, which removes the need
 of repeated access from crawlers to the same URI. 
 
 
@@ -118,7 +121,7 @@ For example:
 ## Crawlers must explain how the crawled data is used
 
 Similar to section
-[Crawlers must be easily identifiable through their user agent string]() crawlers should
+Crawlers must be easily identifiable through their user agent string crawlers should
 explain how the data they crawled will be used. In
 practice this is generally done through the documentation page referenced in the `user-agent` of
 the crawler.
