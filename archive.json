@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-03T01:24:31.726836+00:00",
+  "timestamp": "2025-07-06T01:39:55.872680+00:00",
   "repo": "garyillyes/cbcp",
   "labels": [
     {
@@ -55,15 +55,15 @@
       "id": "I_kwDOOV_Krc6y8bJo",
       "title": "Clarifications regarding crawler IP ranges",
       "url": "https://github.com/garyillyes/cbcp/issues/1",
-      "state": "CLOSED",
+      "state": "OPEN",
       "author": "sebastian-nagel",
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [],
       "body": "> crawler operators should expose the IP ranges they allocated for crawling in a standardized, machine readable format, and keep it reasonably up to date (i.e. shouldn't get older than 7 days).\n\n1. Replace \"shouldn't get older than 7 days\" by \"shouldn't get outdated for more than 7 days\"?\n  The term \"old\" is unspecific: it could also mean that the file is required to be touched every 7 days, without keeping the information up-to-date.\n \n2. Is a 7-day update period sufficient?\n   There are at least the following use cases for the list of IP address ranges:\n   1. verify requests in web server access logs.\n   2. configure IP blocking or explicitly allowing the specified IP ranges.\n   3. IP targeting which includes also \"black hat\" techniques such as \"cloaking\".\n  \n   For (i), \"historic\" IP ranges are a requirement, otherwise verification may raise false alarms about faked user-agent strings in past requests. This would also recommend to attach time periods to IP address ranges.\n\n   For (ii) and (iii), a 7-day update period seems overtly long. New IP ranges should be announced even ahead of time. Since we have to assume that everybody plays nice, \"black hat\" techniques are no counter argument for announcing IP address ahead of time. However, they might be mentioned in the section \"Security Considerations\".\n\n3. An example JSON schema would help to keep variations of `crawlerips.json` at a minimum. At least, it should be mentioned what \"standardized\" means \u2013 \"constant\" for the crawler with a published description / specification or whether it is part of a globally defined standard (maybe upcoming).\n\n4. What about reverse DNS as an alternative or augmenting technique for crawler verification? Should this be mentioned or even added as a section?\n\n",
       "createdAt": "2025-04-17T11:13:39Z",
-      "updatedAt": "2025-04-22T11:12:38Z",
-      "closedAt": "2025-04-22T11:12:36Z",
+      "updatedAt": "2025-07-05T20:38:50Z",
+      "closedAt": null,
       "comments": [
         {
           "author": "garyillyes",
@@ -71,9 +71,658 @@
           "body": "Howdy! \n\nI mentioned this in the interim meeting, but to put it here as well: I won't be able to develop this I-D further for various reasons. I would LOVE if someone could pick it up and develop it further though together with publishers, and then bring it back to the IETF (not yet sure which WG) for adoption. ",
           "createdAt": "2025-04-22T11:12:37Z",
           "updatedAt": "2025-04-22T11:12:37Z"
+        },
+        {
+          "author": "garyillyes",
+          "authorAssociation": "OWNER",
+          "body": "Looks like we're gonna work on this. Feel free to look at the other open issues (specifically [https://github.com/garyillyes/cbcp/issues/4](https://github.com/garyillyes/cbcp/issues/4)) and, if you feel like it, send PRs",
+          "createdAt": "2025-07-05T20:38:50Z",
+          "updatedAt": "2025-07-05T20:38:50Z"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "id": "I_kwDOOV_Krc6_AkH2",
+      "title": "Add a line about rate limiting",
+      "url": "https://github.com/garyillyes/cbcp/issues/3",
+      "state": "OPEN",
+      "author": "garyillyes",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "See [conversation](https://github.com/garyillyes/cbcp/pull/2/files/da25358443d77d039b7040140b7198ba3626d239#r2183298747)",
+      "createdAt": "2025-07-05T08:49:01Z",
+      "updatedAt": "2025-07-05T08:49:01Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 4,
+      "id": "I_kwDOOV_Krc6_ENUx",
+      "title": "Standardize or figure out the existing format used for publishing IP ranges",
+      "url": "https://github.com/garyillyes/cbcp/issues/4",
+      "state": "OPEN",
+      "author": "garyillyes",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "See [https://developers.google.com/static/search/apis/ipranges/googlebot.json](https://developers.google.com/static/search/apis/ipranges/googlebot.json)",
+      "createdAt": "2025-07-05T20:27:04Z",
+      "updatedAt": "2025-07-05T20:27:04Z",
+      "closedAt": null,
+      "comments": []
+    }
+  ],
+  "pulls": [
+    {
+      "number": 2,
+      "id": "PR_kwDOOV_Krc6dQV9g",
+      "title": "Edit pass and additions on best practices",
+      "url": "https://github.com/garyillyes/cbcp/pull/2",
+      "state": "OPEN",
+      "author": "mirjak",
+      "authorAssociation": "NONE",
+      "assignees": [
+        "garyillyes"
+      ],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-07-03T11:52:52Z",
+      "updatedAt": "2025-07-05T20:29:01Z",
+      "baseRepository": "garyillyes/cbcp",
+      "baseRefName": "main",
+      "baseRefOid": "2af677d19af4027e7a54070cac59ad0e851f6ffc",
+      "headRepository": "mirjak/cbcp",
+      "headRefName": "patch-1",
+      "headRefOid": "5f452835a3b4f037c9d709512010e33ed01236e4",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOV_Krc6x23Ln",
+          "commit": {
+            "abbreviatedOid": "da25358"
+          },
+          "author": "garyillyes",
+          "authorAssociation": "OWNER",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-07-03T17:07:03Z",
+          "updatedAt": "2025-07-03T17:18:21Z",
+          "comments": [
+            {
+              "originalPosition": 26,
+              "body": "Unless it's maintained by an independent/unbiased organization like IANA, I don't see how a central website that documents crawlers could work unfortunately",
+              "createdAt": "2025-07-03T17:07:03Z",
+              "updatedAt": "2025-07-03T17:18:21Z"
+            },
+            {
+              "originalPosition": 50,
+              "body": "re standardized: we seemingly agreed to this format but I don't know if this format actually has an official name: https://developers.google.com/static/search/apis/ipranges/googlebot.json Any idea who would know?  ",
+              "createdAt": "2025-07-03T17:09:03Z",
+              "updatedAt": "2025-07-03T17:18:21Z"
+            },
+            {
+              "originalPosition": 62,
+              "body": "crawl delay and rate limit rules are completely bogus and unusable. I suggest we specify proxy signals such as negative delta in connect time and delta in number of 429/5xx statuses instead ",
+              "createdAt": "2025-07-03T17:10:33Z",
+              "updatedAt": "2025-07-03T17:18:21Z"
+            },
+            {
+              "originalPosition": 96,
+              "body": "This is not going to work and I would be very surprised if *any* crawler operator would agree to this. 1 QPS to most websites, including news like WSJ and CNN, but also ecomm like Amazon, would mean spending about 95 years to crawl them. Sites like Facebook add more than 86400 unique urls a day.",
+              "createdAt": "2025-07-03T17:14:13Z",
+              "updatedAt": "2025-07-03T17:18:21Z"
+            },
+            {
+              "originalPosition": 97,
+              "body": "This is not going to work. News sites' homepage is the hub that's hit about every 5 seconds because they care about having their fresh content in search and they publish often enough that having that 5s hit is critical.\r\n\r\nIn general any hard limit will not work I reckon, but happy to be proven wrong. ",
+              "createdAt": "2025-07-03T17:16:02Z",
+              "updatedAt": "2025-07-03T17:18:21Z"
+            },
+            {
+              "originalPosition": 101,
+              "body": "We specifically work with publishers to crawl behind paywalls: https://developers.google.com/search/docs/appearance/structured-data/paywalled-content",
+              "createdAt": "2025-07-03T17:16:50Z",
+              "updatedAt": "2025-07-03T17:18:22Z"
+            },
+            {
+              "originalPosition": 105,
+              "body": "JS content is imperative for a decent index nowadays. This is not going to work.\r\nhttps://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics",
+              "createdAt": "2025-07-03T17:18:04Z",
+              "updatedAt": "2025-07-03T17:18:22Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOV_Krc6x3Fhz",
+          "commit": {
+            "abbreviatedOid": "da25358"
+          },
+          "author": "mirjak",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-03T17:24:13Z",
+          "updatedAt": "2025-07-03T17:24:13Z",
+          "comments": [
+            {
+              "originalPosition": 26,
+              "body": "This was in your text already ;-) But I'm fine to remove it.",
+              "createdAt": "2025-07-03T17:24:13Z",
+              "updatedAt": "2025-07-03T17:24:14Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOV_Krc6x3Ga0",
+          "commit": {
+            "abbreviatedOid": "da25358"
+          },
+          "author": "mirjak",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-03T17:25:42Z",
+          "updatedAt": "2025-07-03T17:25:42Z",
+          "comments": [
+            {
+              "originalPosition": 50,
+              "body": "No, I wasn't aware of this? Who is we? I would guess that this format is a google invention but you should know better than me...",
+              "createdAt": "2025-07-03T17:25:42Z",
+              "updatedAt": "2025-07-03T17:25:42Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOV_Krc6x3K7G",
+          "commit": {
+            "abbreviatedOid": "da25358"
+          },
+          "author": "mirjak",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-03T17:31:19Z",
+          "updatedAt": "2025-07-03T17:31:19Z",
+          "comments": [
+            {
+              "originalPosition": 62,
+              "body": "okay, I actually though \"Crawl-delay\" is part of RFC9303 but seeing just know that it is not... So I guess Google is ignoring this?\r\n\r\nWe can remove this text for now but maybe it would be good to discuss this further in the document why these things are not usable and what to do instead? Or if you have time until Monday, you can of course also add that now.",
+              "createdAt": "2025-07-03T17:31:19Z",
+              "updatedAt": "2025-07-03T17:31:20Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOV_Krc6x3PSk",
+          "commit": {
+            "abbreviatedOid": "da25358"
+          },
+          "author": "mirjak",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-03T17:34:15Z",
+          "updatedAt": "2025-07-03T17:34:16Z",
+          "comments": [
+            {
+              "originalPosition": 96,
+              "body": "Okay, you are right this doesn't work for large pages. It's just a recommendation I read somewhere but didn't think too much about. Maybe we can add some text that discusses a bit more that rate should be adopted based on provider knowledge and for some infrastructures a lower rate should be implemented. Is that something that would be realistic?",
+              "createdAt": "2025-07-03T17:34:15Z",
+              "updatedAt": "2025-07-03T17:34:16Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOV_Krc6x3RtD",
+          "commit": {
+            "abbreviatedOid": "da25358"
+          },
+          "author": "mirjak",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-03T17:36:08Z",
+          "updatedAt": "2025-07-03T17:36:08Z",
+          "comments": [
+            {
+              "originalPosition": 97,
+              "body": "Okay, also a recommendation I read somewhere. So we should maybe discuss a bit more why this not works.\r\n\r\nIf you crawl a news page every 5 seconds, I guess that not the whole page, or is it? Do you make a difference which pages you crawl more often?",
+              "createdAt": "2025-07-03T17:36:08Z",
+              "updatedAt": "2025-07-03T17:36:08Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOV_Krc6x3S9H",
+          "commit": {
+            "abbreviatedOid": "da25358"
+          },
+          "author": "mirjak",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-03T17:37:18Z",
+          "updatedAt": "2025-07-03T17:37:18Z",
+          "comments": [
+            {
+              "originalPosition": 101,
+              "body": "Okay, we can add a clause like \"if not explicitly agreed with the publishers\". Would that work?\r\n\r\nOr maybe we can even change \"should not attempt to access\" to \"should not try to circumvent\" or something? Would that make sense?",
+              "createdAt": "2025-07-03T17:37:18Z",
+              "updatedAt": "2025-07-03T17:37:18Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOV_Krc6x3VBn",
+          "commit": {
+            "abbreviatedOid": "da25358"
+          },
+          "author": "mirjak",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-03T17:38:48Z",
+          "updatedAt": "2025-07-03T17:38:48Z",
+          "comments": [
+            {
+              "originalPosition": 105,
+              "body": "Yes, I thought that was to restrictive but I thought I wait what you say... Are you crawling all JS content or do you select somehow?",
+              "createdAt": "2025-07-03T17:38:48Z",
+              "updatedAt": "2025-07-03T17:38:48Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOV_Krc6yMkxP",
+          "commit": {
+            "abbreviatedOid": "da25358"
+          },
+          "author": "garyillyes",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "> Unless it's maintained by an independent/unbiased organization like IANA, I don't see how a central website that documents crawlers could work unfortunately \n\nMy bad. What I mean is that we should figure out how this would be feasible because I can't think of a way either site/service owners or crawler operators could reasonably maintain such a registry. ",
+          "createdAt": "2025-07-05T08:33:33Z",
+          "updatedAt": "2025-07-05T08:33:34Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOV_Krc6yMmxs",
+          "commit": {
+            "abbreviatedOid": "da25358"
+          },
+          "author": "garyillyes",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "> No, I wasn't aware of this? Who is we? I would guess that this format is a google invention but you should know better than me... \n\nI'm not actually sure where it's coming from to be honest. I borrowed it from another Google IP dump indeed, but it was already used by two other crawler operators at that point. I'll poke a bit more around to see if it has a name and if it's not a standard format, maybe we need someone from a networks WG (RTG? NMRG?) to help make it a standard",
+          "createdAt": "2025-07-05T08:42:37Z",
+          "updatedAt": "2025-07-05T08:42:38Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOV_Krc6yMnqZ",
+          "commit": {
+            "abbreviatedOid": "da25358"
+          },
+          "author": "garyillyes",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-05T08:44:46Z",
+          "updatedAt": "2025-07-05T08:44:46Z",
+          "comments": [
+            {
+              "originalPosition": 26,
+              "body": "My bad. What I mean is that we should figure out how this would be feasible because I can't think of a way either site/service owners or crawler operators could reasonably maintain such a registry.",
+              "createdAt": "2025-07-05T08:44:46Z",
+              "updatedAt": "2025-07-05T08:44:47Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOV_Krc6yMn3J",
+          "commit": {
+            "abbreviatedOid": "da25358"
+          },
+          "author": "garyillyes",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-05T08:45:13Z",
+          "updatedAt": "2025-07-05T08:45:13Z",
+          "comments": [
+            {
+              "originalPosition": 50,
+              "body": "I'm not actually sure where it's coming from to be honest. I borrowed it from another Google IP dump indeed, but it was already used by two other crawler operators at that point. I'll poke a bit more around to see if it has a name and if it's not a standard format, maybe we need someone from a networks WG (RTG? NMRG?) to help make it a standard",
+              "createdAt": "2025-07-05T08:45:13Z",
+              "updatedAt": "2025-07-05T08:45:13Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOV_Krc6yMoxD",
+          "commit": {
+            "abbreviatedOid": "da25358"
+          },
+          "author": "garyillyes",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-05T08:49:48Z",
+          "updatedAt": "2025-07-05T08:49:48Z",
+          "comments": [
+            {
+              "originalPosition": 62,
+              "body": "To the best of my knowledge all crawlers ignore \"Crawl-delay\", with only Bingbot parsing it out (but not actually using it?). I'll close this but opened an issue to [add information on self limiting](https://github.com/garyillyes/cbcp/issues/3#issue-3204596214) ",
+              "createdAt": "2025-07-05T08:49:48Z",
+              "updatedAt": "2025-07-05T08:49:48Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOV_Krc6yMpHv",
+          "commit": {
+            "abbreviatedOid": "da25358"
+          },
+          "author": "garyillyes",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-05T08:54:42Z",
+          "updatedAt": "2025-07-05T08:54:42Z",
+          "comments": [
+            {
+              "originalPosition": 101,
+              "body": "Yeah, perhaps something like \"should not try to circumvent authentication\"?  ",
+              "createdAt": "2025-07-05T08:54:42Z",
+              "updatedAt": "2025-07-05T08:54:42Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOV_Krc6yMrM5",
+          "commit": {
+            "abbreviatedOid": "da25358"
+          },
+          "author": "garyillyes",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-05T09:02:44Z",
+          "updatedAt": "2025-07-05T09:02:45Z",
+          "comments": [
+            {
+              "originalPosition": 105,
+              "body": "pretty much all JS that is not disallowed through robots.txt, and is not excluded by internal heuristics that go after stuff like tracking pixel/analytics/bit mining/etc. \r\n\r\nAlso related to this JS topic, some JS frameworks work with POST verbs for reasons I can't understand, which means that even the GET restriction wouldn't work. \r\n\r\nSuggestion:\r\n\r\nCrawlers should access resources primarily with HTTP GET requests, resorting to other methods (e.g., POST, PUT) only if there's preexisting agreement with the publisher or the publisher's content management software makes those calls automatically when JavaScript is executed.",
+              "createdAt": "2025-07-05T09:02:45Z",
+              "updatedAt": "2025-07-05T09:02:45Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOV_Krc6yMrsp",
+          "commit": {
+            "abbreviatedOid": "da25358"
+          },
+          "author": "garyillyes",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-05T09:05:29Z",
+          "updatedAt": "2025-07-05T09:05:30Z",
+          "comments": [
+            {
+              "originalPosition": 96,
+              "body": "Maybe we add something about this in [this issue](https://github.com/garyillyes/cbcp/issues/3)?",
+              "createdAt": "2025-07-05T09:05:29Z",
+              "updatedAt": "2025-07-05T09:05:30Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOV_Krc6yPUaX",
+          "commit": {
+            "abbreviatedOid": "da25358"
+          },
+          "author": "mirjak",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-05T17:16:48Z",
+          "updatedAt": "2025-07-05T17:16:48Z",
+          "comments": [
+            {
+              "originalPosition": 62,
+              "body": "Should we remove this sentence for now or keep it in for discussion?",
+              "createdAt": "2025-07-05T17:16:48Z",
+              "updatedAt": "2025-07-05T17:16:48Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOV_Krc6yPX-5",
+          "commit": {
+            "abbreviatedOid": "da25358"
+          },
+          "author": "mirjak",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-05T17:20:11Z",
+          "updatedAt": "2025-07-05T17:20:12Z",
+          "comments": [
+            {
+              "originalPosition": 96,
+              "body": "Is this okay?\r\n```suggestion\r\nand should limit the crawling rate to avoid overload, if possible considering limits specified in\r\n```",
+              "createdAt": "2025-07-05T17:20:11Z",
+              "updatedAt": "2025-07-05T17:20:12Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOV_Krc6yPYIA",
+          "commit": {
+            "abbreviatedOid": "da25358"
+          },
+          "author": "mirjak",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-05T17:20:51Z",
+          "updatedAt": "2025-07-05T17:20:51Z",
+          "comments": [
+            {
+              "originalPosition": 97,
+              "body": "Is this still useful to say?\r\n```suggestion\r\nthe REP protocol. Further, ressources should not be re-crawled too frequently.\r\n```",
+              "createdAt": "2025-07-05T17:20:51Z",
+              "updatedAt": "2025-07-05T17:20:51Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOV_Krc6yPY7G",
+          "commit": {
+            "abbreviatedOid": "da25358"
+          },
+          "author": "mirjak",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-05T17:24:33Z",
+          "updatedAt": "2025-07-05T17:24:33Z",
+          "comments": [
+            {
+              "originalPosition": 101,
+              "body": "Is this okay?\r\n```suggestion\r\nCrawlers should not try to circumvent authentication or other access restrictions e.g. when a login is required, CAPTCHAs are used, or the content is behind a paywall, except if explicitly negotiated with the website owner.\r\n```",
+              "createdAt": "2025-07-05T17:24:33Z",
+              "updatedAt": "2025-07-05T17:24:33Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOV_Krc6yPY8i",
+          "commit": {
+            "abbreviatedOid": "da25358"
+          },
+          "author": "mirjak",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-05T17:24:55Z",
+          "updatedAt": "2025-07-05T17:24:56Z",
+          "comments": [
+            {
+              "originalPosition": 95,
+              "body": "```suggestion\r\nGenerally, crawlers should avoid multiple concurrent requests to the same resources\r\n```",
+              "createdAt": "2025-07-05T17:24:55Z",
+              "updatedAt": "2025-07-05T17:24:56Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOV_Krc6yPZAZ",
+          "commit": {
+            "abbreviatedOid": "e109529"
+          },
+          "author": "mirjak",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-05T17:25:43Z",
+          "updatedAt": "2025-07-05T17:25:43Z",
+          "comments": [
+            {
+              "originalPosition": 26,
+              "body": "```suggestion\r\nit should in addition be considered to create a central\r\n```",
+              "createdAt": "2025-07-05T17:25:43Z",
+              "updatedAt": "2025-07-05T17:25:56Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOV_Krc6yPZOK",
+          "commit": {
+            "abbreviatedOid": "e109529"
+          },
+          "author": "mirjak",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-05T17:26:22Z",
+          "updatedAt": "2025-07-05T17:42:19Z",
+          "comments": [
+            {
+              "originalPosition": 27,
+              "body": "```suggestion\r\nregistry where website owners can look up well behaving crawlers.\r\n```",
+              "createdAt": "2025-07-05T17:26:22Z",
+              "updatedAt": "2025-07-05T17:42:19Z"
+            },
+            {
+              "originalPosition": 26,
+              "body": "Do my two small proposed word changes work for you?",
+              "createdAt": "2025-07-05T17:26:55Z",
+              "updatedAt": "2025-07-05T17:42:19Z"
+            },
+            {
+              "originalPosition": 50,
+              "body": "Maybe also open an issue for this and we address it later?",
+              "createdAt": "2025-07-05T17:27:38Z",
+              "updatedAt": "2025-07-05T17:42:19Z"
+            },
+            {
+              "originalPosition": 105,
+              "body": "How about this?\r\n```suggestion\r\nCrawlers should access resources primarily with HTTP GET requests,\r\nresorting to other methods (e.g., POST, PUT) only if there is a preexisting\r\nagreement with the publisher or the publisher's content management software\r\nmakes those calls automatically when JavaScript is executed.\r\nGenerally, load caused by executing JavaScript should be\r\nconsidered carefully or even be avoided whenever possible.\r\n```",
+              "createdAt": "2025-07-05T17:42:14Z",
+              "updatedAt": "2025-07-05T17:42:57Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOV_Krc6yPdp9",
+          "commit": {
+            "abbreviatedOid": "e109529"
+          },
+          "author": "mirjak",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-05T17:44:33Z",
+          "updatedAt": "2025-07-05T17:44:33Z",
+          "comments": [
+            {
+              "originalPosition": 62,
+              "body": "```suggestion\r\nto opt out from crawling.\r\n```",
+              "createdAt": "2025-07-05T17:44:33Z",
+              "updatedAt": "2025-07-05T17:44:33Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOV_Krc6yQLtI",
+          "commit": {
+            "abbreviatedOid": "da25358"
+          },
+          "author": "garyillyes",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-05T20:21:34Z",
+          "updatedAt": "2025-07-05T20:21:34Z",
+          "comments": [
+            {
+              "originalPosition": 26,
+              "body": "yup",
+              "createdAt": "2025-07-05T20:21:34Z",
+              "updatedAt": "2025-07-05T20:21:34Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOV_Krc6yQMHY",
+          "commit": {
+            "abbreviatedOid": "da25358"
+          },
+          "author": "garyillyes",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-05T20:23:45Z",
+          "updatedAt": "2025-07-05T20:23:45Z",
+          "comments": [
+            {
+              "originalPosition": 62,
+              "body": "Let's remove it. crawl-delay and other site owner provided rate limiting is highly unlikely to ever work in the favor of the site owner, no matter how transparent we go with how we crawl, and HTTP already has mechanisms to signal server issues (429, the suite of 500s)",
+              "createdAt": "2025-07-05T20:23:45Z",
+              "updatedAt": "2025-07-05T20:23:46Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOV_Krc6yQNuI",
+          "commit": {
+            "abbreviatedOid": "da25358"
+          },
+          "author": "garyillyes",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-05T20:29:01Z",
+          "updatedAt": "2025-07-05T20:29:01Z",
+          "comments": [
+            {
+              "originalPosition": 50,
+              "body": "Done: https://github.com/garyillyes/cbcp/issues/4",
+              "createdAt": "2025-07-05T20:29:01Z",
+              "updatedAt": "2025-07-05T20:29:01Z"
+            }
+          ]
         }
       ]
     }
-  ],
-  "pulls": []
+  ]
 }
