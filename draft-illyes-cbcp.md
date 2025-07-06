@@ -144,7 +144,7 @@ crawler, and it must also be referenced in the page's metadata for machine
 readability. For example:
 
 ```
-<link rel="help" href="https://example.com/crawlerips.json">
+&lt;link rel="help" href="https://example.com/crawlerips.json"&gt;
 ```
 
 ## Crawlers must explain how the crawled data is used and the crawler can be blocked
