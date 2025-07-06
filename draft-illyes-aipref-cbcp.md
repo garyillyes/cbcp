@@ -3,7 +3,7 @@ title: "Crawler best practices"
 abbrev: "cbcp"
 category: info
 
-docname: draft-illyes-cbcp-latest
+docname: draft-illyes-aipref-cbcp-latest
 submissiontype: independent
 number:
 date:
