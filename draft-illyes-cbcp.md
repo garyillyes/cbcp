@@ -44,119 +44,118 @@ This document describes best pratices for web crawlers.
 
 # Introduction
 
-Automatic clients (i.e. crawlers, bots) are used to access web resources, e.g., for indexing
-for search but more recently also for new use cases related to Artificial Intelligence (AI)
-such as training models. With an increase in crawling activity, it is particular important
-that automatic clients having an expected behavior and respect contraint of the ressources
-being crawled. This includes documenting how to identify them and how their behavior
-can be influenced. As such, crawler operators are requested
-to conform to crawling best pratices in this document.
+Automatic clients, such as crawlers and bots, are used to access web resources,
+including indexing for search engines or, more recently, for new artificial
+intelligence (AI) applications like training models. As crawling activity
+increases, automatic clients must behave appropriately and respect the
+constraints of the resources they access. This includes clearly documenting how
+they can be identified and how their behavior can be influenced. Therefore,
+crawler operators are asked to follow the best practices for crawling outlined
+in this document.
 
-To further help website owners, it should in addition be considered to create a central
-registry where website owners can look up well behaving crawlers.
-Note that while self declared research crawlers, including privacy and malware discovery
-crawlers, and contractual crawlers are welcome to add themselves to adopt these practices,
-due to the nature of the relationship with sites they may exempt themselves from any of
-the Crawler Code of Conduct policies with a rationale.
+To further assist website owners, it should also be considered to create a
+central registry where website owners can look up well-behaved crawlers. Note
+that while self-declared research crawlers, including privacy and malware
+discovery crawlers, and contractual crawlers are welcome to adopt these practices,
+due to the nature of their relationship with sites, they may exempt themselves
+from any of the Crawler Best Practices with a rationale.
 
 
 # Recommended Best Practices
 
-The following best practices are should be followed and are already
-applied by a vast majority of large scale crawlers on the Internet:
+The following best practices should be followed and are already applied by a
+vast majority of large-scale crawlers on the Internet:
 
 1. Crawlers must support and respect the Robots Exclusion Protocol.
 2. Crawlers must be easily identifiable through their user agent string.
-3. Crawlers must not interfere with the normal operation of a site.
+3. Crawlers must not interfere with the regular operation of a site.
 4. Crawlers must support caching directives.
 5. Crawlers must expose the IP ranges they are crawling from in a standardized format.
-6. Crawlers must expose a page where they explain how the crawled data is used and how it can be blocked.
+6. Crawlers must expose a page that explains how the crawled data is used and how it can be blocked.
 
 
 ## Crawlers must respect the Robots Exclusion Protocol
 
-All well behaved crawlers must support the REP as defined in
-{{Section 2.2.1 of REP}} to allow site owners
-to opt out from crawling.
+All well behaved-crawlers must support the REP as defined in
+{{Section 2.2.1 of REP}} to allow site owners to opt out from crawling.
 
-Especially if the website does not support REP, crawlers further need to respect the
-meta robots tag in the HTTP header.
+Especially if the website chooses not to use a robots.txt file as defined
+by the REP, crawlers further need to respect the `X-robots-tag` in the HTTP header.
 
 
 ## Crawlers must be easily identifiable through their user agent string
 
-As stipulated in {{Section 2.2.1 of REP}}
-(Robots Exclusion Protocol; REP), the HTTP request header `user-agent` should
-identify the crawler clearly, typically by including a URL that hosts the crawler's
-description. For example:
+As outlined in {{Section 2.2.1 of REP}} (Robots Exclusion Protocol; REP),
+the HTTP request header 'User-Agent' should clearly identify the crawler,
+usually by including a URL that hosts the crawler's description. For example:
 
 `User-Agent: Mozilla/5.0 (compatible; ExampleBot/0.1; +https://www.example.com/bot.html)`.
 
-This is already a widely supported mechanism among crawler operators.
-To be compliant, crawler operators must specify identifiers unique for their crawlers
-within the case-insensitive user-agent, like "contains 'googlebot' and 'https://url/...'".
-Further, the name should be meaningful in identifying the crawler owner and purpose
-as much as reasonable possible.
+This is already a widely accepted practice among crawler operators. To remain
+compliant, crawler operators must include unique identifiers for their crawlers
+in the case-insensitive User-Agent, such as
+"contains 'googlebot' and 'https://url/...'". Additionally, the name should clearly
+identify both the crawler owner and its purpose as much as reasonably possible.
 
 
 ## Crawlers must not interfere with the normal operation of a site
 
-Depending on a site's setup (computing resources, software efficiency) and its size,
-crawling may slow down the site or take it offline altogether. Crawler operators must
-ensure that their crawlers are equipped with back-out logic that rely on at least the
-standard signals defined by {{Section 15.6 of HTTP-SEMANTICS}}, preferably also
-additional heuristics such as relative response time of the server.
+Depending on a site's setup (computing resources and software efficiency) and its
+size, crawling may slow down the site or even take it offline altogether. Crawler
+operators must ensure that their crawlers are equipped with back-out logic that
+relies on at least the standard signals defined by {{Section 15.6 of HTTP-SEMANTICS}},
+preferably also additional heuristics such as a change in the relative response time
+of the server.
 
-As such, crawlers should log already visited URL and how many requests they sent to a resource
-as well as the respective HTTP status codes in the responses,
-especially if error occur, to avoid repeatedly crawling the same source.
+Therefore, crawlers should log already visited URLs, the number of requests sent to
+each resource, and the respective HTTP status codes in the responses, especially if
+errors occur, to prevent repeatedly crawling the same source.
 
-Generally, crawlers should avoid multiple concurrent requests to the same resources
-and should limit the crawling rate to avoid overload, if possible considering limits specified in
-the REP protocol. Further, ressources should not be re-crawled too frequently.
-Ideally crawlers should limit the crawling depth and number of requests
-per ressource to avoid loops.
+Generally, crawlers should avoid sending multiple requests to the same resources
+at the same time and should limit the crawling speed to prevent server overload, if
+possible, following the limits outlined in the REP protocol. Additionally, resources
+should not be re-crawled too often. Ideally, crawlers should restrict the depth of
+crawling and the number of requests per resource to prevent loops.
 
-Crawlers should not try to circumvent authentication or other access
-restrictions e.g. when a login is required, CAPTCHAs are used, or the content
-is behind a paywall, except if explicitly negotiated with the website owner.
+Crawlers should not attempt to bypass authentication or other access restrictions,
+such as when login is required, CAPTCHAs are in use, or content is behind a paywall,
+unless explicitly agreed upon with the website owner.
 
-Crawlers should access resources primarily with HTTP GET requests,
-resorting to other methods (e.g., POST, PUT) only if there is a preexisting
-agreement with the publisher or the publisher's content management software
-makes those calls automatically when JavaScript is executed.
-Generally, load caused by executing JavaScript should be
-considered carefully or even be avoided whenever possible.
+Crawlers should primarily access resources using HTTP GET requests, resorting to
+other methods (e.g., POST, PUT) only if there is a prior agreement with the publisher
+or if the publisher's content management system automatically makes those calls when
+JavaScript runs. Generally, the load caused by executing JavaScript should be
+carefully considered or even avoided whenever possible.
 
 ## Crawlers must support caching directives
 
-{{HTTP-CACHING}} HTTP caching, which removes the need of repeated access from
-crawlers to the same URL.
+{{HTTP-CACHING}} HTTP caching removes the need of repeated access from crawlers to
+the same URL.
 
 
 ## Crawlers must expose the IP ranges they use for crawling
 
-To complement the REP, crawler operators should expose the IP ranges they allocated for
-crawling in a standardized, machine readable format, and keep it reasonably up to date
-(i.e. shouldn't get older than 7 days).
+To complement the REP, crawler operators should publish the IP ranges they have
+allocated for crawling in a standardized, machine-readable format, and keep this
+information reasonably up-to-date (i.e., should not be outdated for more than 7 days).
 
-The object containing the IP addresses must be linked from the page describing the crawler
-and it must be also referenced in the metadata of the page for machine readability.
-For example:
+The object containing the IP addresses must be linked from the page describing the
+crawler, and it must also be referenced in the page's metadata for machine
+readability. For example:
 
 ```
-&lt;link rel="help" href="https://example.com/crawlerips.json" /&gt;
+<link rel="help" href="https://example.com/crawlerips.json">
 ```
 
 ## Crawlers must explain how the crawled data is used and the crawler can be blocked
 
-Crawlers must be easily identifiable through their user agent string crawlers should
-explain how the data they crawled will be used. In
-practice this is generally done through the documentation page referenced in the `user-agent` of
-the crawler. Further the documentation page should provide a contact address for the crawler owner.
+Crawlers must be easily identifiable through their `user-agent` string, and they
+should explain how the data they collect will be used. In practice, this is usually
+done via the documentation page linked in the crawler's user agent. Additionally,
+the documentation page should include a contact address for the crawler owner.
 
-The webpage should also provides an example REP file to block the crawler and a way to verify
-REP files.
+The webpage should also provide an example REP file to block the crawler and a method
+for verifying REP files.
 
 
 # Conventions and Definitions
