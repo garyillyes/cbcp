@@ -76,7 +76,7 @@ applied by a vast majority of large scale crawlers on the Internet:
 ## Crawlers must respect the Robots Exclusion Protocol
 
 All well behaved crawlers must support the REP as defined in
-{{Section 2.2.1 of RFC9309}} to allow site owners
+{{Section 2.2.1 of REP}} to allow site owners
 to opt out from crawling.
 
 Especially if the website does not support REP, crawlers further need to respect the
@@ -85,7 +85,7 @@ meta robots tag in the HTTP header.
 
 ## Crawlers must be easily identifiable through their user agent string
 
-As stipulated in {{Section 2.2.1 of RFC9309}}
+As stipulated in {{Section 2.2.1 of REP}}
 (Robots Exclusion Protocol; REP), the HTTP request header `user-agent` should
 identify the crawler clearly, typically by including a URL that hosts the crawler's
 description. For example:
@@ -104,7 +104,7 @@ as much as reasonable possible.
 Depending on a site's setup (computing resources, software efficiency) and its size,
 crawling may slow down the site or take it offline altogether. Crawler operators must
 ensure that their crawlers are equipped with back-out logic that rely on at least the
-standard signals defined by {{Section 15.6 of RFC9110}}, preferably also
+standard signals defined by {{Section 15.6 of HTTP-SEMANTICS}}, preferably also
 additional heuristics such as relative response time of the server.
 
 As such, crawlers should log already visited URL and how many requests they sent to a resource
@@ -130,7 +130,7 @@ considered carefully or even be avoided whenever possible.
 
 ## Crawlers must support caching directives
 
-{{RFC9111}} HTTP caching, which removes the need of repeated access from
+{{HTTP-CACHING}} HTTP caching, which removes the need of repeated access from
 crawlers to the same URL.
 
 
