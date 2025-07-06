@@ -20,6 +20,10 @@ author:
     fullname: Gary Illyes
     organization: Independent
     email: synack@garyillyes.com
+ -
+    fullname: Mirja Kühlewind
+    organization: Ericsson
+    email: mirja.kuehlewind@ericsson.com
 
 normative:
 
