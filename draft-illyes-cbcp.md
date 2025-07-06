@@ -17,11 +17,20 @@ keyword:
 
 author:
  -
+    ins: G. Illyes
     fullname: Gary Illyes
     organization: Independent
     email: synack@garyillyes.com
+ -
+    ins: M. Kuehlewind
+    fullname: Mirja Kühlewind
+    organization: Ericsson
+    email: mirja.kuehlewind@ericsson.com
 
 normative:
+   REP: rfc9309
+   HTTP-SEMANTICS: rfc9110
+   HTTP-CACHING: rfc9111
 
 informative:
 
@@ -67,8 +76,8 @@ applied by a vast majority of large scale crawlers on the Internet:
 
 ## Crawlers must respect the Robots Exclusion Protocol
 
-Crawlers must support the REP as defined in
-[RFC9309](https://www.rfc-editor.org/rfc/rfc9309.html#section-2.2.1) to allow site owners
+All well behaved crawlers must support the REP as defined in
+{{Section 2.2.1 of RFC9309}} to allow site owners
 to opt out from crawling.
 
 Especially if the website does not support REP, crawlers further need to respect the
@@ -77,7 +86,7 @@ meta robots tag in the HTTP header.
 
 ## Crawlers must be easily identifiable through their user agent string
 
-As stipulated in [RFC9309](https://www.rfc-editor.org/rfc/rfc9309.html#section-2.2.1)
+As stipulated in {{Section 2.2.1 of RFC9309}}
 (Robots Exclusion Protocol; REP), the HTTP request header `user-agent` should
 identify the crawler clearly, typically by including a URL that hosts the crawler's
 description. For example:
@@ -97,7 +106,7 @@ Depending on a site's setup (computing resources, software efficiency) and its s
 crawling may slow down the site or take it offline altogether. Crawler operators must
 ensure that their crawlers are equipped with back-out logic that rely on at least the
 standard signals defined by
-[RFC9110](https://www.rfc-editor.org/rfc/rfc9110#name-server-error-5xx), preferably also
+{{Section 15.6 of RFC9110}}, preferably also
 additional heuristics such as relative response time of the server.
 
 As such, crawlers should log already visited URL and how many requests they sent to a resource 
@@ -121,7 +130,7 @@ considered carefully or even be avoided whenever possible.
 
 ## Crawlers must support caching directives
 
-[RFC9111](https://www.rfc-editor.org/rfc/rfc9111) HTTP caching, which removes the need
+{{RFC9111}} HTTP caching, which removes the need
 of repeated access from crawlers to the same URI. 
 
 
@@ -141,9 +150,8 @@ For example:
 
 ## Crawlers must explain how the crawled data is used and the crawler can be blocked
 
-Similar to section
-[Crawlers must be easily identifiable through their user agent string]() crawlers should
-also document their crawling policies publically and explain how the data they crawled will be used. In
+Crawlers must be easily identifiable through their user agent string crawlers should
+explain how the data they crawled will be used. In
 practice this is generally done through the documentation page referenced in the `user-agent` of
 the crawler. Further the documentation page should provide a contact address for the crawler owner.
 
