@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-06T01:39:55.872680+00:00",
+  "timestamp": "2025-07-08T01:24:56.370476+00:00",
   "repo": "garyillyes/cbcp",
   "labels": [
     {
@@ -120,26 +120,28 @@
       "id": "PR_kwDOOV_Krc6dQV9g",
       "title": "Edit pass and additions on best practices",
       "url": "https://github.com/garyillyes/cbcp/pull/2",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "mirjak",
-      "authorAssociation": "NONE",
+      "authorAssociation": "COLLABORATOR",
       "assignees": [
         "garyillyes"
       ],
       "labels": [],
       "body": "",
       "createdAt": "2025-07-03T11:52:52Z",
-      "updatedAt": "2025-07-05T20:29:01Z",
+      "updatedAt": "2025-07-06T08:38:20Z",
       "baseRepository": "garyillyes/cbcp",
       "baseRefName": "main",
-      "baseRefOid": "2af677d19af4027e7a54070cac59ad0e851f6ffc",
+      "baseRefOid": "5dfb2015c623371d61a20715f0d384a997ca0405",
       "headRepository": "mirjak/cbcp",
       "headRefName": "patch-1",
-      "headRefOid": "5f452835a3b4f037c9d709512010e33ed01236e4",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "60450375697b250562ecc5565aeda2a2bfc72893",
+      "closedAt": "2025-07-06T08:38:20Z",
+      "mergedAt": "2025-07-06T08:38:20Z",
+      "mergedBy": "garyillyes",
+      "mergeCommit": {
+        "oid": "601a4d96df838139fe5f6bc706bc687de5900a5a"
+      },
       "comments": [],
       "reviews": [
         {
@@ -204,7 +206,7 @@
             "abbreviatedOid": "da25358"
           },
           "author": "mirjak",
-          "authorAssociation": "NONE",
+          "authorAssociation": "COLLABORATOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-07-03T17:24:13Z",
@@ -224,7 +226,7 @@
             "abbreviatedOid": "da25358"
           },
           "author": "mirjak",
-          "authorAssociation": "NONE",
+          "authorAssociation": "COLLABORATOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-07-03T17:25:42Z",
@@ -244,7 +246,7 @@
             "abbreviatedOid": "da25358"
           },
           "author": "mirjak",
-          "authorAssociation": "NONE",
+          "authorAssociation": "COLLABORATOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-07-03T17:31:19Z",
@@ -264,7 +266,7 @@
             "abbreviatedOid": "da25358"
           },
           "author": "mirjak",
-          "authorAssociation": "NONE",
+          "authorAssociation": "COLLABORATOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-07-03T17:34:15Z",
@@ -284,7 +286,7 @@
             "abbreviatedOid": "da25358"
           },
           "author": "mirjak",
-          "authorAssociation": "NONE",
+          "authorAssociation": "COLLABORATOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-07-03T17:36:08Z",
@@ -304,7 +306,7 @@
             "abbreviatedOid": "da25358"
           },
           "author": "mirjak",
-          "authorAssociation": "NONE",
+          "authorAssociation": "COLLABORATOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-07-03T17:37:18Z",
@@ -324,7 +326,7 @@
             "abbreviatedOid": "da25358"
           },
           "author": "mirjak",
-          "authorAssociation": "NONE",
+          "authorAssociation": "COLLABORATOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-07-03T17:38:48Z",
@@ -490,7 +492,7 @@
             "abbreviatedOid": "da25358"
           },
           "author": "mirjak",
-          "authorAssociation": "NONE",
+          "authorAssociation": "COLLABORATOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-07-05T17:16:48Z",
@@ -510,7 +512,7 @@
             "abbreviatedOid": "da25358"
           },
           "author": "mirjak",
-          "authorAssociation": "NONE",
+          "authorAssociation": "COLLABORATOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-07-05T17:20:11Z",
@@ -530,7 +532,7 @@
             "abbreviatedOid": "da25358"
           },
           "author": "mirjak",
-          "authorAssociation": "NONE",
+          "authorAssociation": "COLLABORATOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-07-05T17:20:51Z",
@@ -550,7 +552,7 @@
             "abbreviatedOid": "da25358"
           },
           "author": "mirjak",
-          "authorAssociation": "NONE",
+          "authorAssociation": "COLLABORATOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-07-05T17:24:33Z",
@@ -570,7 +572,7 @@
             "abbreviatedOid": "da25358"
           },
           "author": "mirjak",
-          "authorAssociation": "NONE",
+          "authorAssociation": "COLLABORATOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-07-05T17:24:55Z",
@@ -590,7 +592,7 @@
             "abbreviatedOid": "e109529"
           },
           "author": "mirjak",
-          "authorAssociation": "NONE",
+          "authorAssociation": "COLLABORATOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-07-05T17:25:43Z",
@@ -610,7 +612,7 @@
             "abbreviatedOid": "e109529"
           },
           "author": "mirjak",
-          "authorAssociation": "NONE",
+          "authorAssociation": "COLLABORATOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-07-05T17:26:22Z",
@@ -648,7 +650,7 @@
             "abbreviatedOid": "e109529"
           },
           "author": "mirjak",
-          "authorAssociation": "NONE",
+          "authorAssociation": "COLLABORATOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-07-05T17:44:33Z",
@@ -721,8 +723,84 @@
               "updatedAt": "2025-07-05T20:29:01Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOV_Krc6ySJFJ",
+          "commit": {
+            "abbreviatedOid": "da25358"
+          },
+          "author": "garyillyes",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-06T08:36:56Z",
+          "updatedAt": "2025-07-06T08:36:56Z",
+          "comments": [
+            {
+              "originalPosition": 62,
+              "body": "Resolving this for now so we have a clean slate",
+              "createdAt": "2025-07-06T08:36:56Z",
+              "updatedAt": "2025-07-06T08:36:56Z"
+            }
+          ]
         }
       ]
+    },
+    {
+      "number": 5,
+      "id": "PR_kwDOOV_Krc6dnqjy",
+      "title": "make references real references",
+      "url": "https://github.com/garyillyes/cbcp/pull/5",
+      "state": "MERGED",
+      "author": "mirjak",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-07-06T08:23:58Z",
+      "updatedAt": "2025-07-06T08:29:21Z",
+      "baseRepository": "garyillyes/cbcp",
+      "baseRefName": "main",
+      "baseRefOid": "2af677d19af4027e7a54070cac59ad0e851f6ffc",
+      "headRepository": "mirjak/cbcp",
+      "headRefName": "patch-3",
+      "headRefOid": "49df553d1209bc19ce3f36ed8a290a3dc6e5e453",
+      "closedAt": "2025-07-06T08:29:20Z",
+      "mergedAt": "2025-07-06T08:29:20Z",
+      "mergedBy": "garyillyes",
+      "mergeCommit": {
+        "oid": "5dfb2015c623371d61a20715f0d384a997ca0405"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 6,
+      "id": "PR_kwDOOV_Krc6dnqlJ",
+      "title": "Add me as author",
+      "url": "https://github.com/garyillyes/cbcp/pull/6",
+      "state": "MERGED",
+      "author": "mirjak",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-07-06T08:24:09Z",
+      "updatedAt": "2025-07-06T08:28:50Z",
+      "baseRepository": "garyillyes/cbcp",
+      "baseRefName": "main",
+      "baseRefOid": "2af677d19af4027e7a54070cac59ad0e851f6ffc",
+      "headRepository": "mirjak/cbcp",
+      "headRefName": "patch-2",
+      "headRefOid": "79e36d85980890d2f8097c0e6a3c8e8e53e556fb",
+      "closedAt": "2025-07-06T08:28:50Z",
+      "mergedAt": "2025-07-06T08:28:50Z",
+      "mergedBy": "garyillyes",
+      "mergeCommit": {
+        "oid": "0dbc38203a1da4ca22be4567e95f89fef0cca7e7"
+      },
+      "comments": [],
+      "reviews": []
     }
   ]
 }
