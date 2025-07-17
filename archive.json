@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-10T01:25:56.151535+00:00",
+  "timestamp": "2025-07-17T01:38:04.260518+00:00",
   "repo": "garyillyes/cbcp",
   "labels": [
     {
@@ -120,6 +120,38 @@
           "updatedAt": "2025-07-08T17:43:56Z"
         }
       ]
+    },
+    {
+      "number": 7,
+      "id": "I_kwDOOV_Krc7AneAv",
+      "title": "Should a page describing the crawler be mandated?",
+      "url": "https://github.com/garyillyes/cbcp/issues/7",
+      "state": "OPEN",
+      "author": "thibmeu",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "In [section 2.5 Crawlers must expose IPs](https://datatracker.ietf.org/doc/html/draft-illyes-aipref-cbcp-00#section-2.5), there is the following paragraph\n\n> The object containing the IP addresses must be linked from the page describing the crawler, and it must also be referenced in the page's metadata for machine readability.\n\n\nIt implies crawlers should have a page that describe them. It is not introduced anywhere in the document.\n\nMaybe there should be a section describing such expectation.",
+      "createdAt": "2025-07-15T09:43:01Z",
+      "updatedAt": "2025-07-15T09:43:01Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 8,
+      "id": "I_kwDOOV_Krc7AnuR1",
+      "title": "Reference to webbotauth",
+      "url": "https://github.com/garyillyes/cbcp/issues/8",
+      "state": "OPEN",
+      "author": "thibmeu",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "This will depends on the timeline for this document, and the timeline of webbotauth.\n\nI think it would be relevant to point to the work being conducted on [web-bot-auth mailing](https://mailarchive.ietf.org/arch/browse/web-bot-auth/).\n\nBased on the [under work charter](https://docs.google.com/document/d/1cNksLq-nd1_ALHhGYTEG_g3RaNGeWrDMHXLORwV0dY8/edit?usp=sharing) for a working group, it aims to standardise methods for crawlers to cryptographically identify themselves, which would nicely complement the methods presented in this document.\n\nOne of the deliverable is a best current practice document. The current document is a good reference point for non-cryptographic authentication, and having all in one would be valuable.",
+      "createdAt": "2025-07-15T10:00:13Z",
+      "updatedAt": "2025-07-15T10:02:08Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
