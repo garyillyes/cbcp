@@ -79,6 +79,7 @@ vast majority of large-scale crawlers on the Internet:
 6. Crawlers must expose a page that explains how the crawling can be blocked, whether the page is rendered, amd how the crawled data is used.
 
 
+
 ## Crawlers must respect the Robots Exclusion Protocol
 
 All well behaved-crawlers must support the REP as defined in
@@ -132,6 +133,7 @@ or if the publisher's content management system automatically makes those calls 
 JavaScript runs. Generally, the load caused by executing JavaScript should be
 carefully considered or even avoided whenever possible.
 
+
 ## Crawlers must support caching directives
 
 {{HTTP-CACHING}} HTTP caching removes the need of repeated access from crawlers to
@@ -152,6 +154,7 @@ readability. For example:
 &lt;link rel="help" href="https://example.com/crawlerips.json"&gt;
 ```
 
+
 ## Crawlers must explain how the crawled data is used and how the crawler can be blocked
 
 Crawlers must be easily identifiable through their `user-agent` string, and they
@@ -164,6 +167,7 @@ for verifying REP files.
 
 If the crawler has exempted itself of these best practices, the documentation
 page should describe the reason for that.
+
 
 
 # Conventions and Definitions
@@ -182,6 +186,7 @@ This document has no IANA actions.
 
 
 --- back
+
 
 # Acknowledgments
 {:numbered="false"}
