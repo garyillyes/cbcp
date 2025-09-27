@@ -5,8 +5,10 @@
 Network Working Group                                          G. Illyes
 Internet-Draft                                               Independent
 Intended status: Informational                             M. Kuehlewind
-Expires: 7 January 2026                                         Ericsson
-                                                             6 July 2025
+Expires: 31 March 2026                                          Ericsson
+                                                                 A. Kohn
+                                                     Blind Five Year Old
+                                                       27 September 2025
 
 
                          Crawler best practices
@@ -38,7 +40,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 7 January 2026.
+   This Internet-Draft will expire on 31 March 2026.
 
 Copyright Notice
 
@@ -62,8 +64,8 @@ Table of Contents
            site
      2.4.  Crawlers must support caching directives
      2.5.  Crawlers must expose the IP ranges they use for crawling
-     2.6.  Crawlers must explain how the crawled data is used and the
-           crawler can be blocked
+     2.6.  Crawlers must explain how the crawled data is used and how
+           the crawler can be blocked
    3.  Conventions and Definitions
    4.  Security Considerations
    5.  IANA Considerations
@@ -75,12 +77,12 @@ Table of Contents
 
    Automatic clients, such as crawlers and bots, are used to access web
    resources, including indexing for search engines or, more recently,
-   for new artificial intelligence (AI) applications like training
-   models.  As crawling activity increases, automatic clients must
-   behave appropriately and respect the constraints of the resources
-   they access.  This includes clearly documenting how they can be
-   identified and how their behavior can be influenced.  Therefore,
-   crawler operators are asked to follow the best practices for crawling
+   training data for new artifical intelligence (AI) applications.  As
+   crawling activity increases, automatic clients must behave
+   appropriately and respect the constraints of the resources they
+   access.  This includes clearly documenting how they can be identified
+   and how their behavior can be influenced.  Therefore, crawler
+   operators are asked to follow the best practices for crawling
    outlined in this document.
 
    To further assist website owners, it should also be considered to
@@ -108,8 +110,9 @@ Table of Contents
    5.  Crawlers must expose the IP ranges they are crawling from in a
        standardized format.
 
-   6.  Crawlers must expose a page that explains how the crawled data is
-       used and how it can be blocked.
+   6.  Crawlers must expose a page that explains how the crawling can be
+       blocked, whether the page is rendered, amd how the crawled data
+       is used.
 
 2.1.  Crawlers must respect the Robots Exclusion Protocol
 
@@ -148,10 +151,10 @@ Table of Contents
    preferably also additional heuristics such as a change in the
    relative response time of the server.
 
-   Therefore, crawlers should log already visited URLs, the number of
-   requests sent to each resource, and the respective HTTP status codes
-   in the responses, especially if errors occur, to prevent repeatedly
-   crawling the same source.
+   errors occur, to prevent repeatedly crawling the same source.  Using
+   the same data, crawlers should, on a best effort basis, crawl the
+   site at times of the day when the site is estimated to have fewer
+   human visitors.
 
    Generally, crawlers should avoid sending multiple requests to the
    same resources at the same time and should limit the crawling speed
@@ -190,8 +193,8 @@ Table of Contents
 
    &lt;link rel="help" href="https://example.com/crawlerips.json"&gt;
 
-2.6.  Crawlers must explain how the crawled data is used and the crawler
-      can be blocked
+2.6.  Crawlers must explain how the crawled data is used and how the
+      crawler can be blocked
 
    Crawlers must be easily identifiable through their user-agent string,
    and they should explain how the data they collect will be used.  In
@@ -201,6 +204,9 @@ Table of Contents
 
    The webpage should also provide an example REP file to block the
    crawler and a method for verifying REP files.
+
+   If the crawler has exempted itself of these best practices, the
+   documentation page should describe the reason for that.
 
 3.  Conventions and Definitions
 
@@ -260,3 +266,8 @@ Authors' Addresses
    Mirja Kühlewind
    Ericsson
    Email: mirja.kuehlewind@ericsson.com
+
+
+   AJ Kohn
+   Blind Five Year Old
+   Email: aj@blindfiveyearold.com
