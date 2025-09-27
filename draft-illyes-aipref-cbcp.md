@@ -76,7 +76,8 @@ vast majority of large-scale crawlers on the Internet:
 3. Crawlers must not interfere with the regular operation of a site.
 4. Crawlers must support caching directives.
 5. Crawlers must expose the IP ranges they are crawling from in a standardized format.
-6. Crawlers must expose a page that explains how the crawling can be blocked, whether the page is rendered, amd how the crawled data is used.
+6. Crawlers must expose a page that explains how the crawling can be blocked, whether
+   the page is rendered, amd how the crawled data is used.
 
 
 
