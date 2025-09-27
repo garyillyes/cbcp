@@ -10,33 +10,32 @@ date:
 v: 4
 # area: AREA
 # workgroup: WG Working Group
-
 keyword:
-  - next generation
-  - unicorn
-  - sparkling distributed ledger
+ - next generation
+ - unicorn
+ - sparkling distributed ledger
 
 author:
-  -
+ -
     ins: G. Illyes
     fullname: Gary Illyes
     organization: Independent
     email: synack@garyillyes.com
--
+ -
     ins: M. Kuehlewind
     fullname: Mirja Kühlewind
     organization: Ericsson
     email: mirja.kuehlewind@ericsson.com
--
+ -
     ins: A. Kohn
     fullname: AJ Kohn
     organization: Blind Five Year Old
     email: aj@blindfiveyearold.com
 
 normative:
-  REP: rfc9309
-  HTTP-SEMANTICS: rfc9110
-  HTTP-CACHING: rfc9111
+   REP: rfc9309
+   HTTP-SEMANTICS: rfc9110
+   HTTP-CACHING: rfc9111
 
 informative:
 
