@@ -1,5 +1,4 @@
 ---
-
 title: "Crawler best practices"
 abbrev: "cbcp"
 category: info
@@ -9,42 +8,42 @@ submissiontype: independent
 number:
 date:
 v: 4
-
 # area: AREA
-
 # workgroup: WG Working Group
-
 keyword:
-
-- next generation
-- unicorn
-- sparkling distributed ledger
+ - next generation
+ - unicorn
+ - sparkling distributed ledger
 
 author:
-
-- ins: G. Illyes
-  fullname: Gary Illyes
-  organization: Independent
-  email: synack@garyillyes.com
-- ins: M. Kuehlewind
-  fullname: Mirja Kühlewind
-  organization: Ericsson
-  email: mirja.kuehlewind@ericsson.com
-- ins: A. Kohn
-  fullname: AJ Kohn
-  organization: Blind Five Year Old
-  email: aj@blindfiveyearold.com
+ -
+    ins: G. Illyes
+    fullname: Gary Illyes
+    organization: Independent
+    email: synack@garyillyes.com
+ -
+    ins: M. Kuehlewind
+    fullname: Mirja Kühlewind
+    organization: Ericsson
+    email: mirja.kuehlewind@ericsson.com
+ -
+    ins: A. Kohn
+    fullname: AJ Kohn
+    organization: Blind Five Year Old
+    email: aj@blindfiveyearold.com
 
 normative:
-REP: rfc9309
-HTTP-SEMANTICS: rfc9110
-HTTP-CACHING: rfc9111
+   REP: rfc9309
+   HTTP-SEMANTICS: rfc9110
+   HTTP-CACHING: rfc9111
 
 informative:
+
 
 --- abstract
 
 This document describes best pratices for web crawlers.
+
 
 --- middle
 
@@ -66,6 +65,7 @@ discovery crawlers, and contractual crawlers are welcome to adopt these practice
 due to the nature of their relationship with sites, they may exempt themselves
 from any of the Crawler Best Practices with a rationale.
 
+
 # Recommended Best Practices
 
 The following best practices should be followed and are already applied by a
@@ -76,8 +76,8 @@ vast majority of large-scale crawlers on the Internet:
 3. Crawlers must not interfere with the regular operation of a site.
 4. Crawlers must support caching directives.
 5. Crawlers must expose the IP ranges they are crawling from in a standardized format.
-6. Crawlers must expose a page that explains how the crawled data is used and how it can be blocked.
-7. Crawlers must detail whether they render the pages fetched (e.g. execute JavaScript)
+6. Crawlers must expose a page that explains how the crawling can be blocked, whether the page is rendered, amd how the crawled data is used.
+
 
 ## Crawlers must respect the Robots Exclusion Protocol
 
@@ -86,6 +86,7 @@ All well behaved-crawlers must support the REP as defined in
 
 Especially if the website chooses not to use a robots.txt file as defined
 by the REP, crawlers further need to respect the `X-robots-tag` in the HTTP header.
+
 
 ## Crawlers must be easily identifiable through their user agent string
 
@@ -101,6 +102,7 @@ in the case-insensitive User-Agent, such as
 "contains 'googlebot' and 'https://url/...'". Additionally, the name should clearly
 identify both the crawler owner and its purpose as much as reasonably possible.
 
+
 ## Crawlers must not interfere with the normal operation of a site
 
 Depending on a site's setup (computing resources and software efficiency) and its
@@ -110,8 +112,6 @@ relies on at least the standard signals defined by {{Section 15.6 of HTTP-SEMANT
 preferably also additional heuristics such as a change in the relative response time
 of the server.
 
-Therefore, crawlers should log already visited URLs, the number of requests sent to
-each resource, and the respective HTTP status codes in the responses, especially if
 errors occur, to prevent repeatedly crawling the same source. Using the same data,
 crawlers should, on a best effort basis, crawl the site at times of the day when
 the site is estimated to have fewer human visitors.
@@ -137,6 +137,7 @@ carefully considered or even avoided whenever possible.
 {{HTTP-CACHING}} HTTP caching removes the need of repeated access from crawlers to
 the same URL.
 
+
 ## Crawlers must expose the IP ranges they use for crawling
 
 To complement the REP, crawler operators should publish the IP ranges they have
@@ -161,25 +162,28 @@ the documentation page should include a contact address for the crawler owner.
 The webpage should also provide an example REP file to block the crawler and a method
 for verifying REP files.
 
-If the crawler exempted itself of these best practices, the documentatio page
-should describe the reason for that.
+If the crawler has exempted itself of these best practices, the documentation
+page should describe the reason for that.
+
 
 # Conventions and Definitions
 
 {::boilerplate bcp14-tagged}
 
+
 # Security Considerations
 
 TODO Security
+
 
 # IANA Considerations
 
 This document has no IANA actions.
 
+
 --- back
 
 # Acknowledgments
-
 {:numbered="false"}
 
 TODO acknowledge.
