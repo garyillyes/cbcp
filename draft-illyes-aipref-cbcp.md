@@ -33,6 +33,7 @@ author:
     email: aj@blindfiveyearold.com
 
 normative:
+   JAFAR: I-D.draft-illyes-aipref-jafar
    REP: rfc9309
    HTTP-SEMANTICS: rfc9110
    HTTP-CACHING: rfc9111
@@ -62,7 +63,7 @@ To further assist website owners, it should also be considered to create a
 central registry where website owners can look up well-behaved crawlers. Note
 that while self-declared research crawlers, including privacy and malware
 discovery crawlers, and contractual crawlers are welcome to adopt these practices,
-due to the nature of their relationship with sites, they may exempt themselves
+due to the nature of their relationsh with sites, they may exempt themselves
 from any of the Crawler Best Practices with a rationale.
 
 
@@ -75,7 +76,7 @@ vast majority of large-scale crawlers on the Internet:
 2. Crawlers must be easily identifiable through their user agent string.
 3. Crawlers must not interfere with the regular operation of a site.
 4. Crawlers must support caching directives.
-5. Crawlers must expose the IP ranges they are crawling from in a standardized format.
+5. Crawlers must expose the  ranges they are crawling from in a standardized format.
 6. Crawlers must expose a page that explains how the crawling can be blocked, whether
    the page is rendered, amd how the crawled data is used.
 
@@ -94,7 +95,7 @@ by the REP, crawlers further need to respect the `X-robots-tag` in the HTTP head
 
 As outlined in {{Section 2.2.1 of REP}} (Robots Exclusion Protocol; REP),
 the HTTP request header 'User-Agent' should clearly identify the crawler,
-usually by including a URL that hosts the crawler's description. For example:
+usually by including a URL that hosts the crawler's descrtion. For example:
 
 `User-Agent: Mozilla/5.0 (compatible; ExampleBot/0.1; +https://www.example.com/bot.html)`.
 
@@ -109,7 +110,7 @@ identify both the crawler owner and its purpose as much as reasonably possible.
 
 Depending on a site's setup (computing resources and software efficiency) and its
 size, crawling may slow down the site or even take it offline altogether. Crawler
-operators must ensure that their crawlers are equipped with back-out logic that
+operators must ensure that their crawlers are equped with back-out logic that
 relies on at least the standard signals defined by {{Section 15.6 of HTTP-SEMANTICS}},
 preferably also additional heuristics such as a change in the relative response time
 of the server.
@@ -118,7 +119,7 @@ errors occur, to prevent repeatedly crawling the same source. Using the same dat
 crawlers should, on a best effort basis, crawl the site at times of the day when
 the site is estimated to have fewer human visitors.
 
-Generally, crawlers should avoid sending multiple requests to the same resources
+Generally, crawlers should avoid sending multle requests to the same resources
 at the same time and should limit the crawling speed to prevent server overload, if
 possible, following the limits outlined in the REP protocol. Additionally, resources
 should not be re-crawled too often. Ideally, crawlers should restrict the depth of
@@ -131,7 +132,7 @@ unless explicitly agreed upon with the website owner.
 Crawlers should primarily access resources using HTTP GET requests, resorting to
 other methods (e.g., POST, PUT) only if there is a prior agreement with the publisher
 or if the publisher's content management system automatically makes those calls when
-JavaScript runs. Generally, the load caused by executing JavaScript should be
+JavaScrt runs. Generally, the load caused by executing JavaScrt should be
 carefully considered or even avoided whenever possible.
 
 
@@ -144,8 +145,8 @@ the same URL.
 ## Crawlers must expose the IP ranges they use for crawling
 
 To complement the REP, crawler operators should publish the IP ranges they have
-allocated for crawling in a standardized, machine-readable format, and keep this
-information reasonably up-to-date (i.e., should not be outdated for more than 7 days).
+allocated for crawling in {{JAFAR}} format, and keep this information reasonably
+up-to-date, according to the specification.
 
 The object containing the IP addresses must be linked from the page describing the
 crawler, and it must also be referenced in the page's metadata for machine
