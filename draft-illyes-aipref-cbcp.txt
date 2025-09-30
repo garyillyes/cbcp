@@ -5,10 +5,10 @@
 Network Working Group                                          G. Illyes
 Internet-Draft                                               Independent
 Intended status: Informational                             M. Kuehlewind
-Expires: 31 March 2026                                          Ericsson
+Expires: 3 April 2026                                           Ericsson
                                                                  A. Kohn
                                                      Blind Five Year Old
-                                                       27 September 2025
+                                                       30 September 2025
 
 
                          Crawler best practices
@@ -40,7 +40,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 31 March 2026.
+   This Internet-Draft will expire on 3 April 2026.
 
 Copyright Notice
 
@@ -90,7 +90,7 @@ Table of Contents
    behaved crawlers.  Note that while self-declared research crawlers,
    including privacy and malware discovery crawlers, and contractual
    crawlers are welcome to adopt these practices, due to the nature of
-   their relationship with sites, they may exempt themselves from any of
+   their relationsh with sites, they may exempt themselves from any of
    the Crawler Best Practices with a rationale.
 
 2.  Recommended Best Practices
@@ -107,7 +107,7 @@ Table of Contents
 
    4.  Crawlers must support caching directives.
 
-   5.  Crawlers must expose the IP ranges they are crawling from in a
+   5.  Crawlers must expose the ranges they are crawling from in a
        standardized format.
 
    6.  Crawlers must expose a page that explains how the crawling can be
@@ -129,7 +129,7 @@ Table of Contents
    As outlined in Section 2.2.1 of [REP] (Robots Exclusion Protocol;
    REP), the HTTP request header 'User-Agent' should clearly identify
    the crawler, usually by including a URL that hosts the crawler's
-   description.  For example:
+   descrtion.  For example:
 
    User-Agent: Mozilla/5.0 (compatible; ExampleBot/0.1;
    +https://www.example.com/bot.html).
@@ -146,7 +146,7 @@ Table of Contents
    Depending on a site's setup (computing resources and software
    efficiency) and its size, crawling may slow down the site or even
    take it offline altogether.  Crawler operators must ensure that their
-   crawlers are equipped with back-out logic that relies on at least the
+   crawlers are equped with back-out logic that relies on at least the
    standard signals defined by Section 15.6 of [HTTP-SEMANTICS],
    preferably also additional heuristics such as a change in the
    relative response time of the server.
@@ -156,11 +156,11 @@ Table of Contents
    site at times of the day when the site is estimated to have fewer
    human visitors.
 
-   Generally, crawlers should avoid sending multiple requests to the
-   same resources at the same time and should limit the crawling speed
-   to prevent server overload, if possible, following the limits
-   outlined in the REP protocol.  Additionally, resources should not be
-   re-crawled too often.  Ideally, crawlers should restrict the depth of
+   Generally, crawlers should avoid sending multle requests to the same
+   resources at the same time and should limit the crawling speed to
+   prevent server overload, if possible, following the limits outlined
+   in the REP protocol.  Additionally, resources should not be re-
+   crawled too often.  Ideally, crawlers should restrict the depth of
    crawling and the number of requests per resource to prevent loops.
 
    Crawlers should not attempt to bypass authentication or other access
@@ -171,9 +171,9 @@ Table of Contents
    Crawlers should primarily access resources using HTTP GET requests,
    resorting to other methods (e.g., POST, PUT) only if there is a prior
    agreement with the publisher or if the publisher's content management
-   system automatically makes those calls when JavaScript runs.
-   Generally, the load caused by executing JavaScript should be
-   carefully considered or even avoided whenever possible.
+   system automatically makes those calls when JavaScrt runs.
+   Generally, the load caused by executing JavaScrt should be carefully
+   considered or even avoided whenever possible.
 
 2.4.  Crawlers must support caching directives
 
@@ -183,9 +183,8 @@ Table of Contents
 2.5.  Crawlers must expose the IP ranges they use for crawling
 
    To complement the REP, crawler operators should publish the IP ranges
-   they have allocated for crawling in a standardized, machine-readable
-   format, and keep this information reasonably up-to-date (i.e., should
-   not be outdated for more than 7 days).
+   they have allocated for crawling in [JAFAR] format, and keep this
+   information reasonably up-to-date, according to the specification.
 
    The object containing the IP addresses must be linked from the page
    describing the crawler, and it must also be referenced in the page's
@@ -237,6 +236,12 @@ Table of Contents
               Ed., "HTTP Semantics", STD 97, RFC 9110,
               DOI 10.17487/RFC9110, June 2022,
               <https://www.rfc-editor.org/rfc/rfc9110>.
+
+   [JAFAR]    Illyes, G., "A JSON-Based Format for Publishing IP Ranges
+              of Automated HTTP Clients", Work in Progress, Internet-
+              Draft, draft-illyes-aipref-jafar-00, 30 September 2025,
+              <https://datatracker.ietf.org/doc/html/draft-illyes-
+              aipref-jafar-00>.
 
    [REP]      Koster, M., Illyes, G., Zeller, H., and L. Sassman,
               "Robots Exclusion Protocol", RFC 9309,

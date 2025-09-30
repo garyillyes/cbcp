@@ -1052,7 +1052,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Illyes, et al.</td>
-<td class="center">Expires 31 March 2026</td>
+<td class="center">Expires 3 April 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1065,12 +1065,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-illyes-aipref-cbcp-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-09-27" class="published">27 September 2025</time>
+<time datetime="2025-09-30" class="published">30 September 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-03-31">31 March 2026</time></dd>
+<dd class="expires"><time datetime="2026-04-03">3 April 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1120,7 +1120,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 31 March 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 3 April 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1211,7 +1211,7 @@ document.<a href="#section-1-1" class="pilcrow">¶</a></p>
 central registry where website owners can look up well-behaved crawlers. Note
 that while self-declared research crawlers, including privacy and malware
 discovery crawlers, and contractual crawlers are welcome to adopt these practices,
-due to the nature of their relationship with sites, they may exempt themselves
+due to the nature of their relationsh with sites, they may exempt themselves
 from any of the Crawler Best Practices with a rationale.<a href="#section-1-2" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -1236,7 +1236,7 @@ vast majority of large-scale crawlers on the Internet:<a href="#section-2-1" cla
           <p id="section-2-2.4.1">Crawlers must support caching directives.<a href="#section-2-2.4.1" class="pilcrow">¶</a></p>
 </li>
         <li id="section-2-2.5">
-          <p id="section-2-2.5.1">Crawlers must expose the IP ranges they are crawling from in a standardized format.<a href="#section-2-2.5.1" class="pilcrow">¶</a></p>
+          <p id="section-2-2.5.1">Crawlers must expose the  ranges they are crawling from in a standardized format.<a href="#section-2-2.5.1" class="pilcrow">¶</a></p>
 </li>
         <li id="section-2-2.6">
           <p id="section-2-2.6.1">Crawlers must expose a page that explains how the crawling can be blocked, whether
@@ -1261,7 +1261,7 @@ by the REP, crawlers further need to respect the <code>X-robots-tag</code> in th
         </h3>
 <p id="section-2.2-1">As outlined in <span><a href="https://rfc-editor.org/rfc/rfc9309#section-2.2.1" class="relref">Section 2.2.1</a> of [<a href="#REP" class="cite xref">REP</a>]</span> (Robots Exclusion Protocol; REP),
 the HTTP request header 'User-Agent' should clearly identify the crawler,
-usually by including a URL that hosts the crawler's description. For example:<a href="#section-2.2-1" class="pilcrow">¶</a></p>
+usually by including a URL that hosts the crawler's descrtion. For example:<a href="#section-2.2-1" class="pilcrow">¶</a></p>
 <p id="section-2.2-2"><code>User-Agent: Mozilla/5.0 (compatible; ExampleBot/0.1; +https://www.example.com/bot.html)</code>.<a href="#section-2.2-2" class="pilcrow">¶</a></p>
 <p id="section-2.2-3">This is already a widely accepted practice among crawler operators. To remain
 compliant, crawler operators must include unique identifiers for their crawlers
@@ -1277,14 +1277,14 @@ identify both the crawler owner and its purpose as much as reasonably possible.<
         </h3>
 <p id="section-2.3-1">Depending on a site's setup (computing resources and software efficiency) and its
 size, crawling may slow down the site or even take it offline altogether. Crawler
-operators must ensure that their crawlers are equipped with back-out logic that
+operators must ensure that their crawlers are equped with back-out logic that
 relies on at least the standard signals defined by <span><a href="https://rfc-editor.org/rfc/rfc9110#section-15.6" class="relref">Section 15.6</a> of [<a href="#HTTP-SEMANTICS" class="cite xref">HTTP-SEMANTICS</a>]</span>,
 preferably also additional heuristics such as a change in the relative response time
 of the server.<a href="#section-2.3-1" class="pilcrow">¶</a></p>
 <p id="section-2.3-2">errors occur, to prevent repeatedly crawling the same source. Using the same data,
 crawlers should, on a best effort basis, crawl the site at times of the day when
 the site is estimated to have fewer human visitors.<a href="#section-2.3-2" class="pilcrow">¶</a></p>
-<p id="section-2.3-3">Generally, crawlers should avoid sending multiple requests to the same resources
+<p id="section-2.3-3">Generally, crawlers should avoid sending multle requests to the same resources
 at the same time and should limit the crawling speed to prevent server overload, if
 possible, following the limits outlined in the REP protocol. Additionally, resources
 should not be re-crawled too often. Ideally, crawlers should restrict the depth of
@@ -1295,7 +1295,7 @@ unless explicitly agreed upon with the website owner.<a href="#section-2.3-4" cl
 <p id="section-2.3-5">Crawlers should primarily access resources using HTTP GET requests, resorting to
 other methods (e.g., POST, PUT) only if there is a prior agreement with the publisher
 or if the publisher's content management system automatically makes those calls when
-JavaScript runs. Generally, the load caused by executing JavaScript should be
+JavaScrt runs. Generally, the load caused by executing JavaScrt should be
 carefully considered or even avoided whenever possible.<a href="#section-2.3-5" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -1314,8 +1314,8 @@ the same URL.<a href="#section-2.4-1" class="pilcrow">¶</a></p>
 <a href="#section-2.5" class="section-number selfRef">2.5. </a><a href="#name-crawlers-must-expose-the-ip" class="section-name selfRef">Crawlers must expose the IP ranges they use for crawling</a>
         </h3>
 <p id="section-2.5-1">To complement the REP, crawler operators should publish the IP ranges they have
-allocated for crawling in a standardized, machine-readable format, and keep this
-information reasonably up-to-date (i.e., should not be outdated for more than 7 days).<a href="#section-2.5-1" class="pilcrow">¶</a></p>
+allocated for crawling in <span>[<a href="#JAFAR" class="cite xref">JAFAR</a>]</span> format, and keep this information reasonably
+up-to-date, according to the specification.<a href="#section-2.5-1" class="pilcrow">¶</a></p>
 <p id="section-2.5-2">The object containing the IP addresses must be linked from the page describing the
 crawler, and it must also be referenced in the page's metadata for machine
 readability. For example:<a href="#section-2.5-2" class="pilcrow">¶</a></p>
@@ -1381,6 +1381,10 @@ appear in all capitals, as shown here.<a href="#section-3-1" class="pilcrow">¶<
 <dt id="HTTP-SEMANTICS">[HTTP-SEMANTICS]</dt>
       <dd>
 <span class="refAuthor">Fielding, R., Ed.</span>, <span class="refAuthor">Nottingham, M., Ed.</span>, and <span class="refAuthor">J. Reschke, Ed.</span>, <span class="refTitle">"HTTP Semantics"</span>, <span class="seriesInfo">STD 97</span>, <span class="seriesInfo">RFC 9110</span>, <span class="seriesInfo">DOI 10.17487/RFC9110</span>, <time datetime="2022-06" class="refDate">June 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9110">https://www.rfc-editor.org/rfc/rfc9110</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="JAFAR">[JAFAR]</dt>
+      <dd>
+<span class="refAuthor">Illyes, G.</span>, <span class="refTitle">"A JSON-Based Format for Publishing IP Ranges of Automated HTTP Clients"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-illyes-aipref-jafar-00</span>, <time datetime="2025-09-30" class="refDate">30 September 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-illyes-aipref-jafar-00">https://datatracker.ietf.org/doc/html/draft-illyes-aipref-jafar-00</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="REP">[REP]</dt>
       <dd>
