@@ -115,9 +115,12 @@ relies on at least the standard signals defined by {{Section 15.6 of HTTP-SEMANT
 preferably also additional heuristics such as a change in the relative response time
 of the server.
 
-errors occur, to prevent repeatedly crawling the same source. Using the same data,
-crawlers should, on a best effort basis, crawl the site at times of the day when
-the site is estimated to have fewer human visitors.
+Therefore, crawlers should log already visited URLs, the number of requests sent to
+each resource, and the respective HTTP status codes in the responses, especially if
+errors occur, to prevent repeatedly crawling the same sourceerrors occur, to prevent
+repeatedly crawling the same source. Using the same data, crawlers should, on a best
+effort basis, crawl the site at times of the day when the site is estimated to have
+fewer human visitors.
 
 Generally, crawlers should avoid sending multle requests to the same resources
 at the same time and should limit the crawling speed to prevent server overload, if
