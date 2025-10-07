@@ -5,10 +5,10 @@
 Network Working Group                                          G. Illyes
 Internet-Draft                                               Independent
 Intended status: Informational                             M. Kuehlewind
-Expires: 3 April 2026                                           Ericsson
+Expires: 10 April 2026                                          Ericsson
                                                                  A. Kohn
                                                      Blind Five Year Old
-                                                       30 September 2025
+                                                          7 October 2025
 
 
                          Crawler best practices
@@ -40,7 +40,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 April 2026.
+   This Internet-Draft will expire on 10 April 2026.
 
 Copyright Notice
 
@@ -151,10 +151,13 @@ Table of Contents
    preferably also additional heuristics such as a change in the
    relative response time of the server.
 
-   errors occur, to prevent repeatedly crawling the same source.  Using
-   the same data, crawlers should, on a best effort basis, crawl the
-   site at times of the day when the site is estimated to have fewer
-   human visitors.
+   Therefore, crawlers should log already visited URLs, the number of
+   requests sent to each resource, and the respective HTTP status codes
+   in the responses, especially if errors occur, to prevent repeatedly
+   crawling the same sourceerrors occur, to prevent repeatedly crawling
+   the same source.  Using the same data, crawlers should, on a best
+   effort basis, crawl the site at times of the day when the site is
+   estimated to have fewer human visitors.
 
    Generally, crawlers should avoid sending multle requests to the same
    resources at the same time and should limit the crawling speed to
