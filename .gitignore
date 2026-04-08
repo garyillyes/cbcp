@@ -21,3 +21,4 @@ draft-illyes-cbcp.xml
 package-lock.json
 report.xml
 !requirements.txt
+cbcp.code-workspace
