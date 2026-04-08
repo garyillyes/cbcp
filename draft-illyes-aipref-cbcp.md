@@ -59,6 +59,17 @@ identified and how their behavior can be influenced. Therefore, crawler
 operators are asked to follow the best practices for crawling outlined in this
 document.
 
+For the purpose of the document, a crawler is an autonomous, non-interactive
+software that functions as an automated HTTP {{HTTP-SEMANTICS}} client set up
+for bulk resource retrieval. Unlike standard interactive clients, a crawler does
+not perform immediate, synchronous link traversal upon URI discovery and
+instead it utilizes an asynchronous crawl service to manage batch processing of
+resources identified typically from previously downloaded resources. It operates
+without real-time human supervision, relying on algorithmic prioritization and
+compliance with protocol-level instructions, such as the
+Robots Exclusion Protocol {{REP}}, to govern its behavior across HTTP
+and supplementary URI-addressable protocols like FTP.
+
 To further assist website owners, it should also be considered to create a
 central registry where website owners can look up well-behaved crawlers. Note
 that while self-declared research crawlers, including privacy and malware
