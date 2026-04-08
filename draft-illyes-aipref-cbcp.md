@@ -173,7 +173,9 @@ for verifying REP files.
 If the crawler has exempted itself of these best practices, the documentation
 page should describe the reason for that.
 
-
+All endpoints hosting identification, documentation, and IP range data must be
+publicly and highly available, and served with minimal latency for programmatic
+access.
 
 # Conventions and Definitions
 
