@@ -164,7 +164,7 @@ discovery This relation should be provided via an HTTP `Link` header or as a
 `<link>` element in the page's HTML metadata section. For example:
 
 ```
-<link rel="client-ranges" href="https://example.com/crawlerips.json">
+&lt;link rel="client-ranges" href="https://example.com/crawlerips.json">
 ```
 
 
