@@ -59,7 +59,7 @@ identified and how their behavior can be influenced. Therefore, crawler
 operators are asked to follow the best practices for crawling outlined in this
 document.
 
-For the purposes of this document, a crawler is an automated 
+For the purposes of this document, a crawler is an automated
 HTTP {{HTTP-SEMANTICS}} client that retrieves resources across one or more web
 sites without direct human initiation of individual requests. A crawler
 discovers URIs during retrieval and schedules them for later processing. It
