@@ -197,11 +197,14 @@ Table of Contents
    they have allocated for crawling in [JAFAR] format, and keep this
    information reasonably up-to-date, according to the specification.
 
-   The object containing the IP addresses must be linked from the page
-   describing the crawler, and it must also be referenced in the page's
-   metadata for machine readability.  For example:
+   The resource containing the IP addresses must be linked from the page
+   describing the crawler using the client-ranges relation.  To
+   facilitate efficient machine discovery This relation should be
+   provided via an HTTP Link header or as a <link> element in the page's
+   HTML metadata section.  For example:
 
-   &lt;link rel="help" href="https://example.com/crawlerips.json"&gt;
+   &lt;link rel="client-ranges" href="https://example.com/
+   crawlerips.json">
 
 2.6.  Crawlers must explain how the crawled data is used and how the
       crawler can be blocked

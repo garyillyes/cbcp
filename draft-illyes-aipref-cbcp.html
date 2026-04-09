@@ -1326,11 +1326,12 @@ the same URL.<a href="#section-2.4-1" class="pilcrow">¶</a></p>
 <p id="section-2.5-1">To complement the REP, crawler operators should publish the IP ranges they have
 allocated for crawling in <span>[<a href="#JAFAR" class="cite xref">JAFAR</a>]</span> format, and keep this information reasonably
 up-to-date, according to the specification.<a href="#section-2.5-1" class="pilcrow">¶</a></p>
-<p id="section-2.5-2">The object containing the IP addresses must be linked from the page describing the
-crawler, and it must also be referenced in the page's metadata for machine
-readability. For example:<a href="#section-2.5-2" class="pilcrow">¶</a></p>
+<p id="section-2.5-2">The resource containing the IP addresses must be linked from the page describing
+the crawler using the <code>client-ranges</code> relation. To facilitate efficient machine
+discovery This relation should be provided via an HTTP <code>Link</code> header or as a
+<code>&lt;link&gt;</code> element in the page's HTML metadata section. For example:<a href="#section-2.5-2" class="pilcrow">¶</a></p>
 <p id="section-2.5-3"><code>
-&amp;lt;link rel="help" href="https://example.com/crawlerips.json"&amp;gt;
+&amp;lt;link rel="client-ranges" href="https://example.com/crawlerips.json"&gt;
 </code><a href="#section-2.5-3" class="pilcrow">¶</a></p>
 </section>
 </div>
