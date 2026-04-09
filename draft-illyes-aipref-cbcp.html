@@ -1208,12 +1208,18 @@ resources they access. This includes clearly documenting how they can be
 identified and how their behavior can be influenced. Therefore, crawler
 operators are asked to follow the best practices for crawling outlined in this
 document.<a href="#section-1-1" class="pilcrow">¶</a></p>
-<p id="section-1-2">To further assist website owners, it should also be considered to create a
+<p id="section-1-2">For the purposes of this document, a crawler is an automated
+HTTP <span>[<a href="#HTTP-SEMANTICS" class="cite xref">HTTP-SEMANTICS</a>]</span> client that retrieves resources across one or more web
+sites without direct human initiation of individual requests. A crawler
+discovers URIs during retrieval and schedules them for later processing. It
+relies on algorithmic prioritization and protocol-level instructions such as the
+Robots Exclusion Protocol <span>[<a href="#REP" class="cite xref">REP</a>]</span> to govern its behavior.<a href="#section-1-2" class="pilcrow">¶</a></p>
+<p id="section-1-3">To further assist website owners, it should also be considered to create a
 central registry where website owners can look up well-behaved crawlers. Note
 that while self-declared research crawlers, including privacy and malware
 discovery crawlers, and contractual crawlers are welcome to adopt these practices,
 due to the nature of their relationship with sites, they may exempt themselves
-from any of the Crawler Best Practices with a rationale.<a href="#section-1-2" class="pilcrow">¶</a></p>
+from any of the Crawler Best Practices with a rationale.<a href="#section-1-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="recommended-best-practices">
