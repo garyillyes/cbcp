@@ -43,7 +43,7 @@ informative:
 
 --- abstract
 
-This document describes best pratices for web crawlers.
+This document describes best practices for web crawlers.
 
 
 --- middle
@@ -52,7 +52,7 @@ This document describes best pratices for web crawlers.
 
 Automatic clients, such as crawlers and bots, are used to access web resources,
 including indexing for search engines or, more recently, training data for new
-artifical intelligence (AI) applications. As crawling activity increases,
+artificial intelligence (AI) applications. As crawling activity increases,
 automatic clients must behave appropriately and respect the constraints of the
 resources they access. This includes clearly documenting how they can be
 identified and how their behavior can be influenced. Therefore, crawler
@@ -70,7 +70,7 @@ To further assist website owners, it should also be considered to create a
 central registry where website owners can look up well-behaved crawlers. Note
 that while self-declared research crawlers, including privacy and malware
 discovery crawlers, and contractual crawlers are welcome to adopt these practices,
-due to the nature of their relationsh with sites, they may exempt themselves
+due to the nature of their relationship with sites, they may exempt themselves
 from any of the Crawler Best Practices with a rationale.
 
 
@@ -83,9 +83,9 @@ vast majority of large-scale crawlers on the Internet:
 2. Crawlers must be easily identifiable through their user agent string.
 3. Crawlers must not interfere with the regular operation of a site.
 4. Crawlers must support caching directives.
-5. Crawlers must expose the  ranges they are crawling from in a standardized format.
+5. Crawlers must expose the ranges they are crawling from in a standardized format.
 6. Crawlers must expose a page that explains how the crawling can be blocked, whether
-   the page is rendered, amd how the crawled data is used.
+   the page is rendered, and how the crawled data is used.
 
 
 
@@ -102,7 +102,7 @@ by the REP, crawlers further need to respect the `X-robots-tag` in the HTTP head
 
 As outlined in {{Section 2.2.1 of REP}} (Robots Exclusion Protocol; REP),
 the HTTP request header 'User-Agent' should clearly identify the crawler,
-usually by including a URL that hosts the crawler's descrtion. For example:
+usually by including a URL that hosts the crawler's description. For example:
 
 `User-Agent: Mozilla/5.0 (compatible; ExampleBot/0.1; +https://www.example.com/bot.html)`.
 
@@ -117,19 +117,19 @@ identify both the crawler owner and its purpose as much as reasonably possible.
 
 Depending on a site's setup (computing resources and software efficiency) and its
 size, crawling may slow down the site or even take it offline altogether. Crawler
-operators must ensure that their crawlers are equped with back-out logic that
+operators must ensure that their crawlers are equipped with back-out logic that
 relies on at least the standard signals defined by {{Section 15.6 of HTTP-SEMANTICS}},
 preferably also additional heuristics such as a change in the relative response time
 of the server.
 
 Therefore, crawlers should log already visited URLs, the number of requests sent to
 each resource, and the respective HTTP status codes in the responses, especially if
-errors occur, to prevent repeatedly crawling the same sourceerrors occur, to prevent
+errors occur, to prevent repeatedly crawling the same source
 repeatedly crawling the same source. Using the same data, crawlers should, on a best
 effort basis, crawl the site at times of the day when the site is estimated to have
 fewer human visitors.
 
-Generally, crawlers should avoid sending multle requests to the same resources
+Generally, crawlers should avoid sending multiple requests to the same resources
 at the same time and should limit the crawling speed to prevent server overload, if
 possible, following the limits outlined in the REP protocol. Additionally, resources
 should not be re-crawled too often. Ideally, crawlers should restrict the depth of
@@ -142,7 +142,7 @@ unless explicitly agreed upon with the website owner.
 Crawlers should primarily access resources using HTTP GET requests, resorting to
 other methods (e.g., POST, PUT) only if there is a prior agreement with the publisher
 or if the publisher's content management system automatically makes those calls when
-JavaScrt runs. Generally, the load caused by executing JavaScrt should be
+JavaScrt runs. Generally, the load caused by executing JavaScript should be
 carefully considered or even avoided whenever possible.
 
 
