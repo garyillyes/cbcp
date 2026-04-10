@@ -39,6 +39,13 @@ normative:
    HTTP-CACHING: rfc9111
 
 informative:
+   HTTP-LINK: rfc8288
+   HTML:
+     title: HTML
+     author:
+       - org: WHATWG
+     date: false
+     target: https://html.spec.whatwg.org/
 
 
 --- abstract
@@ -160,8 +167,9 @@ up-to-date, according to the specification.
 
 The resource containing the IP addresses must be linked from the page describing
 the crawler using the `client-ranges` relation. To facilitate efficient machine
-discovery This relation should be provided via an HTTP `Link` header or as a
-`<link>` element in the page's HTML metadata section. For example:
+discovery. This relation should be provided via an HTTP `Link` header
+{{HTTP-LINK}} or as a `<link>` element in the page's HTML metadata section (as
+defined in {{HTML}}). For example:
 
 ```
 &lt;link rel="client-ranges" href="https://example.com/crawlerips.json">
