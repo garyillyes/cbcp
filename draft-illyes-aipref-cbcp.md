@@ -33,13 +33,14 @@ author:
     email: aj@blindfiveyearold.com
 
 normative:
+   ROBOTS-TAG: I-D.draft-illyes-repext
+   HTTP-CACHING: rfc9111
+   HTTP-LINK: rfc8288
+   HTTP-SEMANTICS: rfc9110
    JAFAR: I-D.draft-illyes-aipref-jafar
    REP: rfc9309
-   HTTP-SEMANTICS: rfc9110
-   HTTP-CACHING: rfc9111
 
 informative:
-   HTTP-LINK: rfc8288
    HTML:
      title: HTML
      author:
