@@ -11,20 +11,20 @@
 <meta content="
        This document describes best practices for web crawlers. 
     " name="description">
-<meta content="xml2rfc 3.32.0" name="generator">
+<meta content="xml2rfc 3.33.0" name="generator">
 <meta content="next generation" name="keyword">
 <meta content="unicorn" name="keyword">
 <meta content="sparkling distributed ledger" name="keyword">
 <meta content="draft-illyes-aipref-cbcp-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.32.0
-    Python 3.12.12
+  xml2rfc 3.33.0
+    Python 3.12.13
     ConfigArgParse 1.7
     google-i18n-address 3.1.1
     intervaltree 3.2.1
     Jinja2 3.1.6
     lxml 6.0.2
-    platformdirs 4.9.4
+    platformdirs 4.9.6
     pycountry 24.6.1
     PyYAML 6.0.3
     requests 2.32.5
@@ -1053,7 +1053,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Illyes, et al.</td>
-<td class="center">Expires 12 October 2026</td>
+<td class="center">Expires 21 October 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1066,12 +1066,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-illyes-aipref-cbcp-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-04-10" class="published">10 April 2026</time>
+<time datetime="2026-04-19" class="published">19 April 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-10-12">12 October 2026</time></dd>
+<dd class="expires"><time datetime="2026-10-21">21 October 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1121,7 +1121,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 12 October 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 21 October 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1154,22 +1154,22 @@ svg :is([fill="white"], [fill^="#fff"]) {
             <p id="section-toc.1-1.2.1"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-recommended-best-practices" class="internal xref">Recommended Best Practices</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.1">
-                <p id="section-toc.1-1.2.2.1.1" class="keepWithNext"><a href="#section-2.1" class="auto internal xref">2.1</a>.  <a href="#name-crawlers-must-respect-the-r" class="internal xref">Crawlers must respect the Robots Exclusion Protocol</a></p>
+                <p id="section-toc.1-1.2.2.1.1" class="keepWithNext"><a href="#section-2.1" class="auto internal xref">2.1</a>.  <a href="#name-crawlers-must-respect-the-r" class="internal xref">Crawlers MUST respect the Robots Exclusion Protocol</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.2">
-                <p id="section-toc.1-1.2.2.2.1" class="keepWithNext"><a href="#section-2.2" class="auto internal xref">2.2</a>.  <a href="#name-crawlers-must-be-easily-ide" class="internal xref">Crawlers must be easily identifiable through their user agent string</a></p>
+                <p id="section-toc.1-1.2.2.2.1" class="keepWithNext"><a href="#section-2.2" class="auto internal xref">2.2</a>.  <a href="#name-crawlers-must-be-easily-ide" class="internal xref">Crawlers MUST be easily identifiable through their user agent string</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.3">
-                <p id="section-toc.1-1.2.2.3.1"><a href="#section-2.3" class="auto internal xref">2.3</a>.  <a href="#name-crawlers-must-not-interfere" class="internal xref">Crawlers must not interfere with the normal operation of a site</a></p>
+                <p id="section-toc.1-1.2.2.3.1"><a href="#section-2.3" class="auto internal xref">2.3</a>.  <a href="#name-crawlers-must-not-interfere" class="internal xref">Crawlers MUST not interfere with the normal operation of a site</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.4">
-                <p id="section-toc.1-1.2.2.4.1"><a href="#section-2.4" class="auto internal xref">2.4</a>.  <a href="#name-crawlers-must-support-cachi" class="internal xref">Crawlers must support caching directives</a></p>
+                <p id="section-toc.1-1.2.2.4.1"><a href="#section-2.4" class="auto internal xref">2.4</a>.  <a href="#name-crawlers-must-support-cachi" class="internal xref">Crawlers MUST support caching directives</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.5">
-                <p id="section-toc.1-1.2.2.5.1"><a href="#section-2.5" class="auto internal xref">2.5</a>.  <a href="#name-crawlers-must-expose-the-ip" class="internal xref">Crawlers must expose the IP ranges they use for crawling</a></p>
+                <p id="section-toc.1-1.2.2.5.1"><a href="#section-2.5" class="auto internal xref">2.5</a>.  <a href="#name-crawlers-must-expose-the-ip" class="internal xref">Crawlers MUST expose the IP ranges they use for crawling</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.6">
-                <p id="section-toc.1-1.2.2.6.1"><a href="#section-2.6" class="auto internal xref">2.6</a>.  <a href="#name-crawlers-must-explain-how-t" class="internal xref">Crawlers must explain how the crawled data is used and how the crawler can be blocked</a></p>
+                <p id="section-toc.1-1.2.2.6.1"><a href="#section-2.6" class="auto internal xref">2.6</a>.  <a href="#name-crawlers-must-explain-how-t" class="internal xref">Crawlers MUST explain how the crawled data is used and how the crawler can be blocked</a></p>
 </li>
             </ul>
 </li>
@@ -1208,14 +1208,14 @@ svg :is([fill="white"], [fill^="#fff"]) {
       <h2 id="name-introduction">
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
-<p id="section-1-1">Automatic clients, such as crawlers and bots, are used to access web resources,
-including indexing for search engines or, more recently, training data for new
-artificial intelligence (AI) applications. As crawling activity increases,
-automatic clients must behave appropriately and respect the constraints of the
-resources they access. This includes clearly documenting how they can be
-identified and how their behavior can be influenced. Therefore, crawler
-operators are asked to follow the best practices for crawling outlined in this
-document.<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-1">Automatic clients, colloquially referred to as crawlers and bots, are used to
+access web resources, including indexing for search engines or, more recently,
+training data for new artificial intelligence (AI) applications. As crawling
+activity increases, automatic clients must behave appropriately and respect the
+constraints of the resources they access. This includes clearly documenting how
+they can be identified and how their behavior can be influenced. Therefore,
+crawler operators are asked to follow the best practices for crawling outlined
+in this document.<a href="#section-1-1" class="pilcrow">¶</a></p>
 <p id="section-1-2">For the purposes of this document, a crawler is an automated
 HTTP <span>[<a href="#HTTP-SEMANTICS" class="cite xref">HTTP-SEMANTICS</a>]</span> client that retrieves resources across one or more web
 sites without direct human initiation of individual requests. A crawler
@@ -1225,9 +1225,9 @@ Robots Exclusion Protocol <span>[<a href="#REP" class="cite xref">REP</a>]</span
 <p id="section-1-3">To further assist website owners, it should also be considered to create a
 central registry where website owners can look up well-behaved crawlers. Note
 that while self-declared research crawlers, including privacy and malware
-discovery crawlers, and contractual crawlers are welcome to adopt these practices,
-due to the nature of their relationship with sites, they may exempt themselves
-from any of the Crawler Best Practices with a rationale.<a href="#section-1-3" class="pilcrow">¶</a></p>
+discovery crawlers, and contractual crawlers are welcome to adopt these
+practices, due to the nature of their relationship with sites, they may exempt
+themselves from any of the Crawler Best Practices with a documented rationale.<a href="#section-1-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="recommended-best-practices">
@@ -1235,128 +1235,137 @@ from any of the Crawler Best Practices with a rationale.<a href="#section-1-3" c
       <h2 id="name-recommended-best-practices">
 <a href="#section-2" class="section-number selfRef">2. </a><a href="#name-recommended-best-practices" class="section-name selfRef">Recommended Best Practices</a>
       </h2>
-<p id="section-2-1">The following best practices should be followed and are already applied by a
+<p id="section-2-1">The following best practices <span class="bcp14">SHOULD</span> be followed and are already applied by a
 vast majority of large-scale crawlers on the Internet:<a href="#section-2-1" class="pilcrow">¶</a></p>
 <ol start="1" type="1" class="normal type-1" id="section-2-2">
 <li id="section-2-2.1">
-          <p id="section-2-2.1.1">Crawlers must support and respect the Robots Exclusion Protocol.<a href="#section-2-2.1.1" class="pilcrow">¶</a></p>
+          <p id="section-2-2.1.1">Crawlers <span class="bcp14">MUST</span> support and respect the Robots Exclusion Protocol.<a href="#section-2-2.1.1" class="pilcrow">¶</a></p>
 </li>
         <li id="section-2-2.2">
-          <p id="section-2-2.2.1">Crawlers must be easily identifiable through their user agent string.<a href="#section-2-2.2.1" class="pilcrow">¶</a></p>
+          <p id="section-2-2.2.1">Crawlers <span class="bcp14">MUST</span> be easily identifiable through their user agent string.<a href="#section-2-2.2.1" class="pilcrow">¶</a></p>
 </li>
         <li id="section-2-2.3">
-          <p id="section-2-2.3.1">Crawlers must not interfere with the regular operation of a site.<a href="#section-2-2.3.1" class="pilcrow">¶</a></p>
+          <p id="section-2-2.3.1">Crawlers <span class="bcp14">MUST</span> not interfere with the regular operation of a site.<a href="#section-2-2.3.1" class="pilcrow">¶</a></p>
 </li>
         <li id="section-2-2.4">
-          <p id="section-2-2.4.1">Crawlers must support caching directives.<a href="#section-2-2.4.1" class="pilcrow">¶</a></p>
+          <p id="section-2-2.4.1">Crawlers <span class="bcp14">MUST</span> support caching directives.<a href="#section-2-2.4.1" class="pilcrow">¶</a></p>
 </li>
         <li id="section-2-2.5">
-          <p id="section-2-2.5.1">Crawlers must expose the ranges they are crawling from in a standardized format.<a href="#section-2-2.5.1" class="pilcrow">¶</a></p>
+          <p id="section-2-2.5.1">Crawlers <span class="bcp14">MUST</span> expose the ranges they are crawling from in a standardized format.<a href="#section-2-2.5.1" class="pilcrow">¶</a></p>
 </li>
         <li id="section-2-2.6">
-          <p id="section-2-2.6.1">Crawlers must expose a page that explains how the crawling can be blocked, whether
+          <p id="section-2-2.6.1">Crawlers <span class="bcp14">MUST</span> expose a page that explains how the crawling can be blocked, whether
 the page is rendered, and how the crawled data is used.<a href="#section-2-2.6.1" class="pilcrow">¶</a></p>
 </li>
       </ol>
 <div id="crawlers-must-respect-the-robots-exclusion-protocol">
 <section id="section-2.1">
         <h3 id="name-crawlers-must-respect-the-r">
-<a href="#section-2.1" class="section-number selfRef">2.1. </a><a href="#name-crawlers-must-respect-the-r" class="section-name selfRef">Crawlers must respect the Robots Exclusion Protocol</a>
+<a href="#section-2.1" class="section-number selfRef">2.1. </a><a href="#name-crawlers-must-respect-the-r" class="section-name selfRef">Crawlers MUST respect the Robots Exclusion Protocol</a>
         </h3>
-<p id="section-2.1-1">All well behaved-crawlers must support the REP as defined in
+<p id="section-2.1-1">All well behaved-crawlers <span class="bcp14">MUST</span> support the REP as defined in
 <span><a href="https://rfc-editor.org/rfc/rfc9309#section-2.2.1" class="relref">Section 2.2.1</a> of [<a href="#REP" class="cite xref">REP</a>]</span> to allow site owners to opt out from crawling.<a href="#section-2.1-1" class="pilcrow">¶</a></p>
 <p id="section-2.1-2">Especially if the website chooses not to use a robots.txt file as defined
-by the REP, crawlers further need to respect the <code>X-robots-tag</code> in the HTTP header.<a href="#section-2.1-2" class="pilcrow">¶</a></p>
+by the REP, crawlers further need to respect the <code>X-robots-tag</code> in the HTTP
+header.<a href="#section-2.1-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="crawlers-must-be-easily-identifiable-through-their-user-agent-string">
 <section id="section-2.2">
         <h3 id="name-crawlers-must-be-easily-ide">
-<a href="#section-2.2" class="section-number selfRef">2.2. </a><a href="#name-crawlers-must-be-easily-ide" class="section-name selfRef">Crawlers must be easily identifiable through their user agent string</a>
+<a href="#section-2.2" class="section-number selfRef">2.2. </a><a href="#name-crawlers-must-be-easily-ide" class="section-name selfRef">Crawlers MUST be easily identifiable through their user agent string</a>
         </h3>
 <p id="section-2.2-1">As outlined in <span><a href="https://rfc-editor.org/rfc/rfc9309#section-2.2.1" class="relref">Section 2.2.1</a> of [<a href="#REP" class="cite xref">REP</a>]</span> (Robots Exclusion Protocol; REP),
-the HTTP request header 'User-Agent' should clearly identify the crawler,
+the HTTP request header <code>User-Agent</code> <span class="bcp14">SHOULD</span> clearly identify the crawler,
 usually by including a URL that hosts the crawler's description. For example:<a href="#section-2.2-1" class="pilcrow">¶</a></p>
-<p id="section-2.2-2"><code>User-Agent: Mozilla/5.0 (compatible; ExampleBot/0.1; +https://www.example.com/bot.html)</code>.<a href="#section-2.2-2" class="pilcrow">¶</a></p>
+<div class="alignLeft art-text artwork" id="section-2.2-2">
+<pre>
+User-Agent: Mozilla/5.0 (compatible; ExampleBot/0.1; +https://www.example.com/bot.html)
+</pre><a href="#section-2.2-2" class="pilcrow">¶</a>
+</div>
 <p id="section-2.2-3">This is already a widely accepted practice among crawler operators. To remain
-compliant, crawler operators must include unique identifiers for their crawlers
-in the case-insensitive User-Agent, such as
-"contains 'googlebot' and 'https://url/...'". Additionally, the name should clearly
-identify both the crawler owner and its purpose as much as reasonably possible.<a href="#section-2.2-3" class="pilcrow">¶</a></p>
+compliant, crawler operators <span class="bcp14">MUST</span> include unique identifiers for their crawlers
+in the case-insensitive <code>User-Agent</code> header, such as
+"contains 'googlebot' and 'https://url/...'". Additionally, the name <span class="bcp14">SHOULD</span>
+clearly identify both the crawler owner and its purpose as much as reasonably
+possible.<a href="#section-2.2-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="crawlers-must-not-interfere-with-the-normal-operation-of-a-site">
 <section id="section-2.3">
         <h3 id="name-crawlers-must-not-interfere">
-<a href="#section-2.3" class="section-number selfRef">2.3. </a><a href="#name-crawlers-must-not-interfere" class="section-name selfRef">Crawlers must not interfere with the normal operation of a site</a>
+<a href="#section-2.3" class="section-number selfRef">2.3. </a><a href="#name-crawlers-must-not-interfere" class="section-name selfRef">Crawlers MUST not interfere with the normal operation of a site</a>
         </h3>
-<p id="section-2.3-1">Depending on a site's setup (computing resources and software efficiency) and its
-size, crawling may slow down the site or even take it offline altogether. Crawler
-operators must ensure that their crawlers are equipped with back-out logic that
-relies on at least the standard signals defined by <span><a href="https://rfc-editor.org/rfc/rfc9110#section-15.6" class="relref">Section 15.6</a> of [<a href="#HTTP-SEMANTICS" class="cite xref">HTTP-SEMANTICS</a>]</span>,
-preferably also additional heuristics such as a change in the relative response time
-of the server.<a href="#section-2.3-1" class="pilcrow">¶</a></p>
-<p id="section-2.3-2">Therefore, crawlers should log already visited URLs, the number of requests sent to
-each resource, and the respective HTTP status codes in the responses, especially if
-errors occur, to prevent repeatedly crawling the same source
-repeatedly crawling the same source. Using the same data, crawlers should, on a best
-effort basis, crawl the site at times of the day when the site is estimated to have
-fewer human visitors.<a href="#section-2.3-2" class="pilcrow">¶</a></p>
-<p id="section-2.3-3">Generally, crawlers should avoid sending multiple requests to the same resources
-at the same time and should limit the crawling speed to prevent server overload, if
-possible, following the limits outlined in the REP protocol. Additionally, resources
-should not be re-crawled too often. Ideally, crawlers should restrict the depth of
-crawling and the number of requests per resource to prevent loops.<a href="#section-2.3-3" class="pilcrow">¶</a></p>
-<p id="section-2.3-4">Crawlers should not attempt to bypass authentication or other access restrictions,
-such as when login is required, CAPTCHAs are in use, or content is behind a paywall,
-unless explicitly agreed upon with the website owner.<a href="#section-2.3-4" class="pilcrow">¶</a></p>
-<p id="section-2.3-5">Crawlers should primarily access resources using HTTP GET requests, resorting to
-other methods (e.g., POST, PUT) only if there is a prior agreement with the publisher
-or if the publisher's content management system automatically makes those calls when
-JavaScrt runs. Generally, the load caused by executing JavaScript should be
-carefully considered or even avoided whenever possible.<a href="#section-2.3-5" class="pilcrow">¶</a></p>
+<p id="section-2.3-1">Depending on a site's setup (computing resources and software efficiency) and
+its size, crawling may slow down the site or even take it offline altogether.
+Crawler operators <span class="bcp14">MUST</span> ensure that their crawlers are equipped with back-out
+logic that relies on at least the standard signals defined by
+<span><a href="https://rfc-editor.org/rfc/rfc9110#section-15.6" class="relref">Section 15.6</a> of [<a href="#HTTP-SEMANTICS" class="cite xref">HTTP-SEMANTICS</a>]</span>, preferably also additional heuristics such
+as a change in the relative response time of the server.<a href="#section-2.3-1" class="pilcrow">¶</a></p>
+<p id="section-2.3-2">Therefore, crawlers <span class="bcp14">SHOULD</span> log already visited URLs, the number of requests sent
+to each resource, and the respective HTTP status codes in the responses,
+especially if errors occur, to prevent repeatedly crawling the same source.
+Using the same data, crawlers <span class="bcp14">SHOULD</span>, on a best effort basis, crawl the site at
+times of the day when the site is estimated to have fewer human visitors.<a href="#section-2.3-2" class="pilcrow">¶</a></p>
+<p id="section-2.3-3">Generally, crawlers <span class="bcp14">SHOULD</span> avoid sending multiple requests to the same resources
+at the same time and <span class="bcp14">SHOULD</span> limit the crawling speed to prevent server overload,
+if possible, following the limits outlined in <span>[<a href="#REP" class="cite xref">REP</a>]</span>. Additionally, resources
+<span class="bcp14">SHOULD NOT</span> be re-crawled too often. Ideally, crawlers <span class="bcp14">SHOULD</span> restrict the depth
+of crawling and the number of requests per resource to prevent loops.<a href="#section-2.3-3" class="pilcrow">¶</a></p>
+<p id="section-2.3-4">Crawlers <span class="bcp14">SHOULD NOT</span> attempt to bypass authentication or other access
+restrictions, such as when login is required, CAPTCHAs are in use, or content is
+behind a paywall, unless explicitly agreed upon with the website owner.<a href="#section-2.3-4" class="pilcrow">¶</a></p>
+<p id="section-2.3-5">Crawlers <span class="bcp14">SHOULD</span> primarily access resources using HTTP GET requests, resorting to
+other methods (e.g., POST, PUT) only if there is a prior agreement with the
+publisher or if the publisher's content management system automatically makes
+those calls through client side code (e.g., JavaScript). Generally, the load
+caused by executing client side code should be carefully considered or even
+avoided whenever possible.<a href="#section-2.3-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="crawlers-must-support-caching-directives">
 <section id="section-2.4">
         <h3 id="name-crawlers-must-support-cachi">
-<a href="#section-2.4" class="section-number selfRef">2.4. </a><a href="#name-crawlers-must-support-cachi" class="section-name selfRef">Crawlers must support caching directives</a>
+<a href="#section-2.4" class="section-number selfRef">2.4. </a><a href="#name-crawlers-must-support-cachi" class="section-name selfRef">Crawlers MUST support caching directives</a>
         </h3>
-<p id="section-2.4-1"><span>[<a href="#HTTP-CACHING" class="cite xref">HTTP-CACHING</a>]</span> HTTP caching removes the need of repeated access from crawlers to
-the same URL.<a href="#section-2.4-1" class="pilcrow">¶</a></p>
+<p id="section-2.4-1"><span>[<a href="#HTTP-CACHING" class="cite xref">HTTP-CACHING</a>]</span> HTTP caching removes the need of repeated access from crawlers
+to the same URL.<a href="#section-2.4-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="crawlers-must-expose-the-ip-ranges-they-use-for-crawling">
 <section id="section-2.5">
         <h3 id="name-crawlers-must-expose-the-ip">
-<a href="#section-2.5" class="section-number selfRef">2.5. </a><a href="#name-crawlers-must-expose-the-ip" class="section-name selfRef">Crawlers must expose the IP ranges they use for crawling</a>
+<a href="#section-2.5" class="section-number selfRef">2.5. </a><a href="#name-crawlers-must-expose-the-ip" class="section-name selfRef">Crawlers MUST expose the IP ranges they use for crawling</a>
         </h3>
-<p id="section-2.5-1">To complement the REP, crawler operators should publish the IP ranges they have
-allocated for crawling in <span>[<a href="#JAFAR" class="cite xref">JAFAR</a>]</span> format, and keep this information reasonably
-up-to-date, according to the specification.<a href="#section-2.5-1" class="pilcrow">¶</a></p>
-<p id="section-2.5-2">The resource containing the IP addresses must be linked from the page describing
+<p id="section-2.5-1">To complement the <span>[<a href="#REP" class="cite xref">REP</a>]</span>, crawler operators <span class="bcp14">SHOULD</span> publish the IP ranges they
+have allocated for crawling in <span>[<a href="#JAFAR" class="cite xref">JAFAR</a>]</span> format, and keep this information
+reasonably up-to-date, according to the specification.<a href="#section-2.5-1" class="pilcrow">¶</a></p>
+<p id="section-2.5-2">The resource containing the IP addresses <span class="bcp14">MUST</span> be linked from the page describing
 the crawler using the <code>client-ranges</code> relation. To facilitate efficient machine
-discovery. This relation should be provided via an HTTP <code>Link</code> header
+discovery. This relation <span class="bcp14">SHOULD</span> be provided via an HTTP <code>Link</code> header
 <span>[<a href="#HTTP-LINK" class="cite xref">HTTP-LINK</a>]</span> or as a <code>&lt;link&gt;</code> element in the page's HTML metadata section (as
 defined in <span>[<a href="#HTML" class="cite xref">HTML</a>]</span>). For example:<a href="#section-2.5-2" class="pilcrow">¶</a></p>
-<p id="section-2.5-3"><code>
-&amp;lt;link rel="client-ranges" href="https://example.com/crawlerips.json"&gt;
-</code><a href="#section-2.5-3" class="pilcrow">¶</a></p>
+<div class="alignLeft art-text artwork" id="section-2.5-3">
+<pre>
+&lt;link rel="client-ranges" href="https://example.com/crawlerips.json"&gt;
+</pre><a href="#section-2.5-3" class="pilcrow">¶</a>
+</div>
 </section>
 </div>
 <div id="crawlers-must-explain-how-the-crawled-data-is-used-and-how-the-crawler-can-be-blocked">
 <section id="section-2.6">
         <h3 id="name-crawlers-must-explain-how-t">
-<a href="#section-2.6" class="section-number selfRef">2.6. </a><a href="#name-crawlers-must-explain-how-t" class="section-name selfRef">Crawlers must explain how the crawled data is used and how the crawler can be blocked</a>
+<a href="#section-2.6" class="section-number selfRef">2.6. </a><a href="#name-crawlers-must-explain-how-t" class="section-name selfRef">Crawlers MUST explain how the crawled data is used and how the crawler can be blocked</a>
         </h3>
-<p id="section-2.6-1">Crawlers must be easily identifiable through their <code>user-agent</code> string, and they
-should explain how the data they collect will be used. In practice, this is usually
-done via the documentation page linked in the crawler's user agent. Additionally,
-the documentation page should include a contact address for the crawler owner.<a href="#section-2.6-1" class="pilcrow">¶</a></p>
-<p id="section-2.6-2">The webpage should also provide an example REP file to block the crawler and a method
-for verifying REP files.<a href="#section-2.6-2" class="pilcrow">¶</a></p>
+<p id="section-2.6-1">Crawlers <span class="bcp14">MUST</span> be easily identifiable through their <code>user-agent</code> string, and they
+<span class="bcp14">SHOULD</span> explain how the data they collect will be used. In practice, this is
+usually done via the documentation page linked in the crawler's user agent.
+Additionally, the documentation page <span class="bcp14">SHOULD</span> include a contact address for the
+crawler owner.<a href="#section-2.6-1" class="pilcrow">¶</a></p>
+<p id="section-2.6-2">The documentation <span class="bcp14">SHOULD</span> also provide an example <span>[<a href="#REP" class="cite xref">REP</a>]</span> file to block the
+crawler and a method for verifying <span>[<a href="#REP" class="cite xref">REP</a>]</span> files.<a href="#section-2.6-2" class="pilcrow">¶</a></p>
 <p id="section-2.6-3">If the crawler has exempted itself of these best practices, the documentation
-page should describe the reason for that.<a href="#section-2.6-3" class="pilcrow">¶</a></p>
+page <span class="bcp14">SHOULD</span> describe the reason for that.<a href="#section-2.6-3" class="pilcrow">¶</a></p>
 <p id="section-2.6-4">All endpoints hosting identification, documentation, and IP range data must be
 publicly and highly available, and served with minimal latency for programmatic
 access.<a href="#section-2.6-4" class="pilcrow">¶</a></p>
