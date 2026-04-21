@@ -3,11 +3,11 @@ title: "Crawler best practices"
 abbrev: "cbcp"
 category: info
 
-docname: draft-illyes-aipref-cbcp-latest
+docname: draft-illyes-webbotauth-cbcp-latest
 submissiontype: independent
 number:
 date:
-v: 5
+v: 6
 # area: AREA
 # workgroup: WG Working Group
 keyword:
