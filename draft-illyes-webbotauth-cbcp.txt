@@ -5,14 +5,14 @@
 Network Working Group                                          G. Illyes
 Internet-Draft                                               Independent
 Intended status: Informational                             M. Kuehlewind
-Expires: 21 October 2026                                        Ericsson
+Expires: 23 October 2026                                        Ericsson
                                                                  A. Kohn
                                                      Blind Five Year Old
-                                                           19 April 2026
+                                                           21 April 2026
 
 
                          Crawler best practices
-                    draft-illyes-aipref-cbcp-latest
+                  draft-illyes-webbotauth-cbcp-latest
 
 Abstract
 
@@ -40,7 +40,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 21 October 2026.
+   This Internet-Draft will expire on 23 October 2026.
 
 Copyright Notice
 
