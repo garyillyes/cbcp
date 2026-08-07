@@ -110,7 +110,7 @@ header.
 ## Crawlers MUST be easily identifiable through their user agent string
 
 As outlined in {{Section 2.2.1 of REP}} (Robots Exclusion Protocol; REP),
-the HTTP request header `User-Agent` SHOULD clearly identify the crawler,
+the HTTP request header `User-Agent` MUST clearly identify the crawler,
 usually by including a URL that hosts the crawler's description. For example:
 
 
@@ -122,7 +122,7 @@ User-Agent: Mozilla/5.0 (compatible; ExampleBot/0.1; +https://www.example.com/bo
 This is already a widely accepted practice among crawler operators. To remain
 compliant, crawler operators MUST include unique identifiers for their crawlers
 in the case-insensitive `User-Agent` header, such as
-"contains 'googlebot' and 'https://url/...'". Additionally, the name SHOULD
+"contains 'googlebot' and 'https://url/...'". Additionally, the name MUST
 clearly identify both the crawler owner and its purpose as much as reasonably
 possible.
 
