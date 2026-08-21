@@ -130,8 +130,8 @@ Table of Contents
    Section 2.2.1 of [REP] to allow site owners to opt out from crawling.
 
    Especially if the website chooses not to use a robots.txt file as
-   defined by the REP, crawlers further need to respect the X-robots-tag
-   in the HTTP header.
+   defined by the REP, crawlers further MUST respect the X-robots-tag in
+   HTTP response headers from the website.
 
 2.2.  Crawlers MUST be easily identifiable through their user agent
       string

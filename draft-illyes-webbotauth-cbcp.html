@@ -1262,8 +1262,8 @@ the page is rendered, and how the crawled data is used.<a href="#section-2-2.6.1
 <p id="section-2.1-1">All well behaved-crawlers <span class="bcp14">MUST</span> support the REP as defined in
 <span><a href="https://rfc-editor.org/rfc/rfc9309#section-2.2.1" class="relref">Section 2.2.1</a> of [<a href="#REP" class="cite xref">REP</a>]</span> to allow site owners to opt out from crawling.<a href="#section-2.1-1" class="pilcrow">¶</a></p>
 <p id="section-2.1-2">Especially if the website chooses not to use a robots.txt file as defined
-by the REP, crawlers further need to respect the <code>X-robots-tag</code> in the HTTP
-header.<a href="#section-2.1-2" class="pilcrow">¶</a></p>
+by the REP, crawlers further <span class="bcp14">MUST</span> respect the <code>X-robots-tag</code> in HTTP
+response headers from the website.<a href="#section-2.1-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="crawlers-must-be-easily-identifiable-through-their-user-agent-string">
