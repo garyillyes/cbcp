@@ -103,8 +103,8 @@ All well behaved-crawlers MUST support the REP as defined in
 {{Section 2.2.1 of REP}} to allow site owners to opt out from crawling.
 
 Especially if the website chooses not to use a robots.txt file as defined
-by the REP, crawlers further need to respect the `X-robots-tag` in the HTTP
-header.
+by the REP, crawlers further MUST respect the `X-robots-tag` in HTTP
+response headers from the website.
 
 
 ## Crawlers MUST be easily identifiable through their user agent string
