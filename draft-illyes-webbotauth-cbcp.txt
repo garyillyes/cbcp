@@ -5,10 +5,10 @@
 Network Working Group                                          G. Illyes
 Internet-Draft                                               Independent
 Intended status: Informational                             M. Kuehlewind
-Expires: 23 October 2026                                        Ericsson
+Expires: 22 February 2027                                       Ericsson
                                                                  A. Kohn
                                                      Blind Five Year Old
-                                                           21 April 2026
+                                                          21 August 2026
 
 
                          Crawler best practices
@@ -40,7 +40,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 23 October 2026.
+   This Internet-Draft will expire on 22 February 2027.
 
 Copyright Notice
 
@@ -137,7 +137,7 @@ Table of Contents
       string
 
    As outlined in Section 2.2.1 of [REP] (Robots Exclusion Protocol;
-   REP), the HTTP request header User-Agent SHOULD clearly identify the
+   REP), the HTTP request header User-Agent MUST clearly identify the
    crawler, usually by including a URL that hosts the crawler's
    description.  For example:
 
@@ -147,7 +147,7 @@ User-Agent: Mozilla/5.0 (compatible; ExampleBot/0.1; +https://www.example.com/bo
    To remain compliant, crawler operators MUST include unique
    identifiers for their crawlers in the case-insensitive User-Agent
    header, such as "contains 'googlebot' and 'https://url/...'".
-   Additionally, the name SHOULD clearly identify both the crawler owner
+   Additionally, the name MUST clearly identify both the crawler owner
    and its purpose as much as reasonably possible.
 
 2.3.  Crawlers MUST not interfere with the normal operation of a site
