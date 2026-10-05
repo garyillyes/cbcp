@@ -37,6 +37,7 @@ normative:
    HTTP-CACHING: rfc9111
    HTTP-LINK: rfc8288
    HTTP-SEMANTICS: rfc9110
+   HTTP-429: rfc6585
    JAFAR: I-D.draft-illyes-aipref-jafar
    REP: rfc9309
 
@@ -113,6 +114,13 @@ Especially if the website chooses not to use a robots.txt file as defined
 by the REP, crawlers further need to respect the `X-robots-tag` in the HTTP
 header.
 
+{{Section 2.3.1.3 of REP}} treats a robots.txt response in the 400-499 range as
+unavailable, in which case the crawler MAY access any resource on the server. A
+429 (Too Many Requests) response ({{Section 4 of HTTP-429}}) is a request to
+slow down, not a statement about the file. Crawlers SHOULD NOT treat a 429
+response to a robots.txt fetch as unavailable, and SHOULD instead handle it as
+unreachable ({{Section 2.3.1.4 of REP}}) until a later fetch succeeds.
+
 
 ## Be easily identifiable through their user agent string
 
@@ -140,8 +148,10 @@ Depending on a site's setup (computing resources and software efficiency) and
 its size, crawling may slow down the site or even take it offline altogether.
 Crawler operators SHOULD ensure that their crawlers are equipped with back-out
 logic that relies on at least the standard signals defined by
-{{Section 15.6 of HTTP-SEMANTICS}}, preferably also additional heuristics such
-as a change in the relative response time of the server.
+{{Section 15.6 of HTTP-SEMANTICS}} and the 429 (Too Many Requests) status code
+defined in {{Section 4 of HTTP-429}}, honoring the `Retry-After` header field
+({{Section 10.2.3 of HTTP-SEMANTICS}}) when present, preferably also additional
+heuristics such as a change in the relative response time of the server.
 
 Therefore, crawlers SHOULD log already visited URLs, the number of requests sent
 to each resource, and the respective HTTP status codes in the responses,
