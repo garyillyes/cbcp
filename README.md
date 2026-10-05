@@ -5,8 +5,8 @@
 This is the working area for the individual Internet-Draft, "Crawler best practices".
 
 * [Editor's Copy](https://garyillyes.github.io/cbcp/#go.draft-illyes-cbcp.html)
-* [Datatracker Page](https://datatracker.ietf.org/doc/draft-illyes-cbcp)
-* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-illyes-cbcp)
+* [Datatracker Page](https://datatracker.ietf.org/doc/draft-illyes-webbotauth-cbcp)
+* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-illyes-webbotauth-cbcp)
 * [Compare Editor's Copy to Individual Draft](https://garyillyes.github.io/cbcp/#go.draft-illyes-cbcp.diff)
 
 

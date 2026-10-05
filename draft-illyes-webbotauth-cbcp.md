@@ -19,8 +19,8 @@ author:
  -
     ins: G. Illyes
     fullname: Gary Illyes
-    organization: Independent
-    email: synack@garyillyes.com
+    organization: Google LLC
+    email: garyillyes@google.com
  -
     ins: M. Kuehlewind
     fullname: Mirja Kühlewind
@@ -74,43 +74,50 @@ discovers URIs during retrieval and schedules them for later processing. It
 relies on algorithmic prioritization and protocol-level instructions such as the
 Robots Exclusion Protocol {{REP}} to govern its behavior.
 
-To further assist website owners, it should also be considered to create a
-central registry where website owners can look up well-behaved crawlers. Note
-that while self-declared research crawlers, including privacy and malware
-discovery crawlers, and contractual crawlers are welcome to adopt these
-practices, due to the nature of their relationship with sites, they may exempt
-themselves from any of the Crawler Best Practices with a documented rationale.
+Note that these best practices are intended for crawlers, and are not
+necessarily appropriate for all automated clients (all "bots"), particularly
+user-directed AI agents, but other (non-crawler) bots may choose to adopt
+similar practices. Furthermore, there are valid reasons why some
+legitimate crawlers cannot or should not be expected to adopt these
+practices. For example, while self-declared research crawlers, including
+privacy and malware discovery crawlers, and contractual crawlers, are welcome
+to adopt these practices, due to the nature of their relationship with sites,
+they may choose not to follow all of these practices.
+
+Crawler operators that adopt these voluntary practices are encouraged to
+engage with efforts to develop new standards and practices for bots, and to
+revisit the recommended best practices as the state of the art evolves.
 
 
 # Recommended Best Practices
 
-The following best practices SHOULD be followed and are already applied by a
-vast majority of large-scale crawlers on the Internet:
+The following best practices are already applied by a vast majority of
+large-scale crawlers on the Internet. Crawlers SHOULD:
 
-1. Crawlers MUST support and respect the Robots Exclusion Protocol.
-2. Crawlers MUST be easily identifiable through their user agent string.
-3. Crawlers MUST not interfere with the regular operation of a site.
-4. Crawlers MUST support caching directives.
-5. Crawlers MUST expose the ranges they are crawling from in a standardized format.
-6. Crawlers MUST expose a page that explains how the crawling can be blocked, whether
+1. Support and respect the Robots Exclusion Protocol.
+2. Be easily identifiable through their user agent string.
+3. Not interfere with the regular operation of a site.
+4. Support caching directives.
+5. Expose the ranges they are crawling from in a standardized format.
+6. Expose a page that explains how the crawling can be blocked, whether
    the page is rendered, and how the crawled data is used.
 
 
 
-## Crawlers MUST respect the Robots Exclusion Protocol
+## Support and respect the Robots Exclusion Protocol
 
-All well behaved-crawlers MUST support the REP as defined in
-{{Section 2.2.1 of REP}} to allow site owners to opt out from crawling.
+Crawlers SHOULD support the REP as defined in {{Section 2.2.1 of REP}} to allow
+site owners to opt out from crawling.
 
 Especially if the website chooses not to use a robots.txt file as defined
-by the REP, crawlers further MUST respect the `X-robots-tag` in HTTP
-response headers from the website.
+by the REP, crawlers further need to respect the `X-robots-tag` in the HTTP
+header.
 
 
-## Crawlers MUST be easily identifiable through their user agent string
+## Be easily identifiable through their user agent string
 
 As outlined in {{Section 2.2.1 of REP}} (Robots Exclusion Protocol; REP),
-the HTTP request header `User-Agent` MUST clearly identify the crawler,
+the HTTP request header `User-Agent` SHOULD clearly identify the crawler,
 usually by including a URL that hosts the crawler's description. For example:
 
 
@@ -122,16 +129,16 @@ User-Agent: Mozilla/5.0 (compatible; ExampleBot/0.1; +https://www.example.com/bo
 This is already a widely accepted practice among crawler operators. To remain
 compliant, crawler operators MUST include unique identifiers for their crawlers
 in the case-insensitive `User-Agent` header, such as
-"contains 'googlebot' and 'https://url/...'". Additionally, the name MUST
+"contains 'googlebot' and 'https://url/...'". Additionally, the name SHOULD
 clearly identify both the crawler owner and its purpose as much as reasonably
 possible.
 
 
-## Crawlers MUST not interfere with the normal operation of a site
+## Do not interfere with the normal operation of a site
 
 Depending on a site's setup (computing resources and software efficiency) and
 its size, crawling may slow down the site or even take it offline altogether.
-Crawler operators MUST ensure that their crawlers are equipped with back-out
+Crawler operators SHOULD ensure that their crawlers are equipped with back-out
 logic that relies on at least the standard signals defined by
 {{Section 15.6 of HTTP-SEMANTICS}}, preferably also additional heuristics such
 as a change in the relative response time of the server.
@@ -160,23 +167,23 @@ caused by executing client side code should be carefully considered or even
 avoided whenever possible.
 
 
-## Crawlers MUST support caching directives
+## Support caching directives
 
 {{HTTP-CACHING}} HTTP caching removes the need of repeated access from crawlers
 to the same URL.
 
 
-## Crawlers MUST expose the IP ranges they use for crawling
+## Expose the IP ranges they use for crawling
 
 To complement the {{REP}}, crawler operators SHOULD publish the IP ranges they
 have allocated for crawling in {{JAFAR}} format, and keep this information
 reasonably up-to-date, according to the specification.
 
-The resource containing the IP addresses MUST be linked from the page describing
-the crawler using the `client-ranges` relation. To facilitate efficient machine
-discovery. This relation SHOULD be provided via an HTTP `Link` header
-{{HTTP-LINK}} or as a `<link>` element in the page's HTML metadata section (as
-defined in {{HTML}}). For example:
+The resource containing the IP addresses SHOULD be linked from the page
+describing the crawler using the `client-ranges` relation. To facilitate
+efficient machine discovery. This relation SHOULD be provided via an HTTP `Link`
+header {{HTTP-LINK}} or as a `<link>` element in the page's HTML metadata
+section (as defined in {{HTML}}). For example:
 
 
 ~~~
@@ -184,10 +191,10 @@ defined in {{HTML}}). For example:
 ~~~
 
 
-## Crawlers MUST explain how the crawled data is used and how the crawler can be blocked
+## Explain how the crawled data is used and how the crawler can be blocked
 
-Crawlers MUST be easily identifiable through their `user-agent` string, and they
-SHOULD explain how the data they collect will be used. In practice, this is
+Crawlers SHOULD be easily identifiable through their `user-agent` string, and
+they SHOULD explain how the data they collect will be used. In practice, this is
 usually done via the documentation page linked in the crawler's user agent.
 Additionally, the documentation page SHOULD include a contact address for the
 crawler owner.
@@ -209,7 +216,34 @@ access.
 
 # Security Considerations
 
-TODO Security
+The best practices described in this document, as well as opt-out mechanisms
+such as {{REP}} and `X-robots-tag`, are voluntary and do not constitute access
+control or content security measures. Malicious or non-conformant clients can
+ignore these practices. To restrict access to sensitive resources, website
+owners SHOULD employ appropriate security mechanisms at the application or
+transport layer, such as HTTP Authentication {{HTTP-SEMANTICS}}.
+
+The `User-Agent` header field is unauthenticated and trivially spoofed. Website
+operators MUST NOT rely solely on the `User-Agent` string to grant privileged
+access or bypass security controls. When verifying a crawler's identity,
+website operators SHOULD corroborate the request's source IP address against
+the crawler operator's published IP ranges {{JAFAR}} or use cryptographic
+authentication mechanisms where available.
+
+Endpoints hosting crawler documentation, `client-ranges` link relations
+{{HTTP-LINK}}, and IP range files {{JAFAR}} SHOULD be served over HTTPS using
+Transport Layer Security (TLS) so that consumers can verify the authenticity
+and integrity of the published IP ranges before using them in access control
+or rate-limiting decisions.
+
+Even legitimate crawlers can inadvertently degrade website availability or
+cause a denial of service if they crawl too aggressively, become trapped in
+infinite URI spaces, or trigger expensive server-side or client-side
+processing. Implementing the back-out, rate-limiting, and caching practices in
+this document mitigates, but does not eliminate, this risk.
+
+The security considerations of {{HTTP-SEMANTICS}}, {{HTTP-CACHING}},
+{{HTTP-LINK}}, {{REP}}, and {{JAFAR}} also apply.
 
 
 # IANA Considerations
