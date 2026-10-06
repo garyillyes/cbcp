@@ -133,6 +133,14 @@ in the case-insensitive `User-Agent` header, such as
 clearly identify both the crawler owner and its purpose as much as reasonably
 possible.
 
+Crawler operators SHOULD use separate domains or subdomains to identify
+crawlers with different purposes, and separate keys when cryptographic
+authentication is used. For example, a search indexing crawler and an AI
+training crawler could use `https://search.example.com` and
+`https://training.example.com`, respectively, with a separate key for each.
+This allows website operators to distinguish each kind of crawler and
+reliably apply crawling policies independently.
+
 
 ## Do not interfere with the normal operation of a site
 
