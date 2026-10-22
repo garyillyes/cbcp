@@ -312,9 +312,9 @@ User-Agent: Mozilla/5.0 (compatible; ExampleBot/0.1; +https://www.example.com/bo
 
    [JAFAR]    Illyes, G., "A JSON-Based Format for Publishing IP Ranges
               of Automated HTTP Clients", Work in Progress, Internet-
-              Draft, draft-illyes-aipref-jafar-01, 9 April 2026,
+              Draft, draft-illyes-webbotauth-jafar-01, 22 October 2026,
               <https://datatracker.ietf.org/doc/html/draft-illyes-
-              aipref-jafar-01>.
+              webbotauth-jafar-01>.
 
    [REP]      Koster, M., Illyes, G., Zeller, H., and L. Sassman,
               "Robots Exclusion Protocol", RFC 9309,
@@ -333,9 +333,9 @@ User-Agent: Mozilla/5.0 (compatible; ExampleBot/0.1; +https://www.example.com/bo
    [ROBOTS-TAG]
               Illyes, G., "Robots Exclusion Protocol Extension for URL
               Level Control", Work in Progress, Internet-Draft, draft-
-              illyes-repext-03, 18 April 2026,
+              illyes-repext-04, 22 October 2026,
               <https://datatracker.ietf.org/doc/html/draft-illyes-
-              repext-03>.
+              repext-04>.
 
 6.2.  Informative References
 
