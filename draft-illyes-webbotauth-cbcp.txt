@@ -5,10 +5,10 @@
 Network Working Group                                          G. Illyes
 Internet-Draft                                                Google LLC
 Intended status: Informational                             M. Kuehlewind
-Expires: 8 April 2027                                           Ericsson
+Expires: 25 April 2027                                          Ericsson
                                                                  A. Kohn
                                                      Blind Five Year Old
-                                                          5 October 2026
+                                                         22 October 2026
 
 
                          Crawler best practices
@@ -40,7 +40,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 8 April 2027.
+   This Internet-Draft will expire on 25 April 2027.
 
 Copyright Notice
 
@@ -152,6 +152,12 @@ User-Agent: Mozilla/5.0 (compatible; ExampleBot/0.1; +https://www.example.com/bo
    header, such as "contains 'googlebot' and 'https://url/...'".
    Additionally, the name SHOULD clearly identify both the crawler owner
    and its purpose as much as reasonably possible.
+
+   Crawler operators that use cryptographic authentication SHOULD use a
+   distinct Signature-Agent URL, and therefore a distinct key directory,
+   for each crawler purpose, as described in Section 6.5 of
+   [HTTPSIG-PROTOCOL].  This is the cryptographic counterpart of the
+   purpose identification in the User-Agent header.
 
 2.3.  Do not interfere with the normal operation of a site
 
@@ -296,6 +302,13 @@ User-Agent: Mozilla/5.0 (compatible; ExampleBot/0.1; +https://www.example.com/bo
               Ed., "HTTP Semantics", STD 97, RFC 9110,
               DOI 10.17487/RFC9110, June 2022,
               <https://www.rfc-editor.org/rfc/rfc9110>.
+
+   [HTTPSIG-PROTOCOL]
+              Meunier, T. and S. Major, "HTTP Message Signatures for
+              automated traffic", Work in Progress, Internet-Draft,
+              draft-ietf-webbotauth-httpsig-protocol-00, 1 September
+              2026, <https://datatracker.ietf.org/doc/html/draft-ietf-
+              webbotauth-httpsig-protocol-00>.
 
    [JAFAR]    Illyes, G., "A JSON-Based Format for Publishing IP Ranges
               of Automated HTTP Clients", Work in Progress, Internet-
