@@ -38,7 +38,7 @@ normative:
    HTTP-LINK: rfc8288
    HTTP-SEMANTICS: rfc9110
    HTTPSIG-PROTOCOL: I-D.ietf-webbotauth-httpsig-protocol
-   JAFAR: I-D.draft-illyes-aipref-jafar
+   JAFAR: I-D.draft-illyes-webbotauth-jafar
    REP: rfc9309
 
 informative:
