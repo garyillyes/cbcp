@@ -168,10 +168,9 @@ behind a paywall, unless explicitly agreed upon with the website owner.
 
 Crawlers SHOULD primarily access resources using HTTP GET requests, resorting to
 other methods (e.g., POST, PUT) only if there is a prior agreement with the
-publisher or if the publisher's content management system automatically makes
-those calls through client side code (e.g., JavaScript). Generally, the load
-caused by executing client side code should be carefully considered or even
-avoided whenever possible.
+publisher or if the publisher's web page or app automatically makes those calls
+through client side code (e.g., JavaScript). Generally, the load caused by executing
+client side code should be carefully considered or evenavoided whenever possible.
 
 
 ## Support caching directives
